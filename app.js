@@ -478,7 +478,7 @@ const PRODUCTS = [
         price: 400,
         condition: 'like-new',
         availability: 'available',
-        specs: ['LED bulb', 'Adjustable arm', 'Touch control', 'USB charging port'],
+        specs: ['Black', 'Adjustable heating', 'Touch control'],
         images: [
             'https://live.staticflickr.com/65535/54713747115_bca446f884_w.jpg',
             'https://live.staticflickr.com/65535/54713747645_07f68e2647_w.jpg'
@@ -512,7 +512,7 @@ const PRODUCTS = [
         price: 350,
         condition: 'like-new',
         availability: 'sold',
-        specs: ['Fast boiling', 'Auto shut-off', 'Cordless design', '1.7L capacity'],
+        specs: ['Pretty curtains', 'Sheer curtains', 'Nice design', 'Good quality'],
         images: [
             'https://live.staticflickr.com/65535/54712576507_c7e9d824cc_w.jpg',
             'https://live.staticflickr.com/65535/54712575817_1406abf708_w.jpg'
