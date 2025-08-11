@@ -1590,7 +1590,7 @@ function showListingPreview() {
 function handleFormSubmission(e) {
     e.preventDefault();
     
-    // Basic validation
+    
     const form = e.target;
     const title = form.title.value.trim();
     const category = form.category.value;
@@ -1602,10 +1602,10 @@ function handleFormSubmission(e) {
         return;
     }
     
-    // Simulate form submission
+    
     showNotification('Your item has been posted successfully!', 'success');
     
-    // Reset form after delay
+    
     setTimeout(() => {
         form.reset();
         document.getElementById('photo-previews').innerHTML = '';
@@ -1620,23 +1620,23 @@ function setupAuthForms() {
     const signinForm = document.getElementById('signin-form');
     const signupForm = document.getElementById('signup-form');
     
-    // Tab switching
+    
     authTabs.forEach(tab => {
         tab.addEventListener('click', (e) => {
             const targetTab = e.target.dataset.tab;
             
-            // Update active tab
+           
             authTabs.forEach(t => t.classList.remove('active'));
             e.target.classList.add('active');
             
-            // Update active panel
+            
             authPanels.forEach(panel => panel.classList.remove('active'));
             const targetPanel = document.getElementById(`${targetTab}-panel`);
             if (targetPanel) targetPanel.classList.add('active');
         });
     });
     
-    // Form submissions
+   
     if (signinForm) {
         signinForm.addEventListener('submit', handleSignin);
     }
@@ -1649,19 +1649,32 @@ function setupAuthForms() {
 function handleSignin(e) {
     e.preventDefault();
     const form = e.target;
-    const email = form.email.value;
+    const email = form.email.value.trim();
     const password = form.password.value;
+
     
-    // Basic validation
+    const isValidGmail = (email) => /^[^\s@]+@gmail\.com$/i.test(email);
+
+   
     if (!email || !password) {
         showNotification('Please fill in all fields', 'error');
         return;
     }
-    
-    // Simulate authentication
+
+    if (!isValidGmail(email)) {
+        showNotification('Email must be a valid Gmail address (example@gmail.com)', 'error');
+        return;
+    }
+
+    if (password.length < 6) {
+        showNotification('Password must be at least 6 characters', 'error');
+        return;
+    }
+
+  
     showNotification('Signed in successfully!', 'success');
     currentUser = { email, name: 'Student User' };
-    
+
     setTimeout(() => {
         window.location.href = 'index.html';
     }, 1500);
@@ -1670,30 +1683,43 @@ function handleSignin(e) {
 function handleSignup(e) {
     e.preventDefault();
     const form = e.target;
-    const name = form.name.value;
-    const email = form.email.value;
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
     const password = form.password.value;
     const confirmPassword = form.confirmPassword.value;
-    
-    // Basic validation
+
+   
+    const isValidGmail = (email) => /^[^\s@]+@gmail\.com$/i.test(email);
+
     if (!name || !email || !password || !confirmPassword) {
         showNotification('Please fill in all fields', 'error');
         return;
     }
-    
+
+    if (!isValidGmail(email)) {
+        showNotification('Email must be a valid Gmail address (example@gmail.com)', 'error');
+        return;
+    }
+
+    if (password.length < 6) {
+        showNotification('Password must be at least 6 characters', 'error');
+        return;
+    }
+
     if (password !== confirmPassword) {
         showNotification('Passwords do not match', 'error');
         return;
     }
+
     
-    // Simulate registration
     showNotification('Account created successfully!', 'success');
     currentUser = { email, name };
-    
+
     setTimeout(() => {
         window.location.href = 'index.html';
     }, 1500);
 }
+
 
 // ===== ENHANCED NAVIGATION =====
 function setupNavigation() {
