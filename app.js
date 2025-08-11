@@ -12,7 +12,7 @@ let allProducts = [];
 
 // ===== ENHANCED PRODUCT DATA =====
 const PRODUCTS = [
-// Yoga Mats (5 items)
+// Yoga Mats (5 items)[
     {
         id: 'ym-001',
         name: 'Yoga Mat',
