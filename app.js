@@ -484,7 +484,7 @@ const PRODUCTS = [
             'https://live.staticflickr.com/65535/54713747645_07f68e2647_w.jpg'
         ],
         alt: 'Modern multipurpose kettle for boiling water, cooking, and reheating',
-        description: 'Kettle perfect for students in dorm rooms, quick and convenient.,
+        description: 'Kettle perfect for students in dorm rooms, quick and convenient.',
         seller: 'Verma',
         postedDate: '2024-12-12'
     },
