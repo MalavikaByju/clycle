@@ -425,70 +425,69 @@ const PRODUCTS = [
     },
     {
         id: 'st-002',
-        name: 'Art Supply Kit',
+        name: 'Sharpie Highlighters',
         category: 'stationery',
-        price: 800,
+        price: 450,
         condition: 'good',
         availability: 'available',
-        specs: ['Colored pencils', 'Sketching pads', 'Erasers and blenders', 'Carrying case'],
+        specs: ['Sharpie highlighters in 6 colours- Orange, Yellow, Blue, Green, Pink, Purple'],
         images: [
-            'https://via.placeholder.com/600x400?text=Art+Supply+Kit',
-            'https://via.placeholder.com/600x400?text=Art+Materials'
+            'https://live.staticflickr.com/65535/54713637779_4bd28aa28f_w.jpg'
         ],
-        alt: 'Complete art supply kit with colored pencils and sketching materials',
-        description: 'Everything needed for art classes. High-quality materials in organized case.',
-        seller: 'Art Student',
+        alt: 'Complete Sharpie Highlighter Kit',
+        description: 'Everything needed for classes. High-quality materials for annotating.',
+        seller: 'Upagnya',
         postedDate: '2024-12-20'
     },
     {
         id: 'st-003',
-        name: 'Notebook Set',
+        name: 'Stamps',
         category: 'stationery',
         price: 250,
         condition: 'new',
         availability: 'available',
-        specs: ['Pack of 5 notebooks', 'Ruled pages', 'A4 size', 'Durable covers'],
+        specs: ['Pack of 6 stamps', 'Red colour', 'Bright and Vibrant', 'Medium size'],
         images: [
-            'https://via.placeholder.com/600x400?text=Notebook+Set',
-            'https://via.placeholder.com/600x400?text=Notebook+Pages'
+            'https://live.staticflickr.com/65535/54713636234_3efcf76b60_n.jpg',
+            'hhttps://live.staticflickr.com/65535/54713413516_b874efaea3_w.jpg'
         ],
-        alt: 'Set of five ruled notebooks with colorful covers',
-        description: 'Essential notebooks for note-taking. High-quality paper and durable binding.',
-        seller: 'Stationery Store',
+        alt: 'Set of six red coloured stamps for notebooks',
+        description: 'Essential aesthetic stamps.',
+        seller: 'Donna',
         postedDate: '2024-12-19'
     },
     {
         id: 'st-004',
-        name: 'Pen Collection',
+        name: 'Washi Tapes',
         category: 'stationery',
-        price: 180,
+        price: 100,
         condition: 'good',
         availability: 'available',
-        specs: ['Ballpoint pens', 'Gel pens', 'Highlighters', 'Various colors'],
+        specs: ['Set of 6 Washi Tapes', 'Various colors'],
         images: [
-            'https://via.placeholder.com/600x400?text=Pen+Collection',
-            'https://via.placeholder.com/600x400?text=Pen+Colors'
+            'https://live.staticflickr.com/65535/54713637314_56524faa26_w.jpg',
+            'https://live.staticflickr.com/65535/54713638829_8acfb40e0a_w.jpg'
         ],
-        alt: 'Collection of various pens and highlighters in different colors',
-        description: 'Complete writing instrument collection. Perfect for students who love variety.',
-        seller: 'Office Supply',
+        alt: 'Collection of various washi tapes in different colors',
+        description: 'Complete washi tapes collection. Perfect for students who love variety.',
+        seller: 'Thaneswari',
         postedDate: '2024-12-18'
     },
     {
         id: 'st-005',
-        name: 'Desk Organizer',
+        name: 'Post-Its',
         category: 'stationery',
-        price: 350,
+        price: 100,
         condition: 'like-new',
         availability: 'available',
-        specs: ['Multiple compartments', 'Wooden construction', 'Compact design', 'Non-slip base'],
+        specs: ['Multiple compartments', 'Different colours', 'Compact design', 'Very Sticky'],
         images: [
-            'https://via.placeholder.com/600x400?text=Desk+Organizer',
-            'https://via.placeholder.com/600x400?text=Organized+Desk'
+            'https://live.staticflickr.com/65535/54713620528_6d95c4e7c5_w.jpg',
+            'https://live.staticflickr.com/65535/54713748645_617e5655c5_w.jpg'
         ],
-        alt: 'Wooden desk organizer with multiple compartments for supplies',
-        description: 'Keep your study space organized. Multiple compartments for all your supplies.',
-        seller: 'Organized Student',
+        alt: 'Set of Post-Its and Annotating Tabs',
+        description: 'Keep your study organized. Multiple compartments for all your sticky note supplies.',
+        seller: 'Devangi',
         postedDate: '2024-12-17'
     },
 
