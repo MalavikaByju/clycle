@@ -15,16 +15,16 @@ const PRODUCTS = [
     // Yoga Mats (5 items)
     {
         id: 'ym-001',
-        name: 'Premium Yoga Mat',
+        name: 'Yoga Mat',
         category: 'yoga-mats',
-        price: 1200,
+        price: 800,
         condition: 'like-new',
         availability: 'available',
         specs: ['6mm thickness', 'Non-slip surface', 'Eco-friendly TPE material', '183cm x 61cm'],
         images: [
-            'https://flic.kr/p/2rmRGtN?text=Yoga+Mat',
-            'https://via.placeholder.com/600x400?text=Yoga+Mat+Detail+1',
-            'https://via.placeholder.com/600x400?text=Yoga+Mat+Detail+2'
+            'https://live.staticflickr.com/65535/54713637664_cbbba9da65_w.jpg?text=Yoga+Mat',
+            'https://live.staticflickr.com/65535/54713637659_dc7185bc43_w.jpg?text=Yoga+Mat+Detail+1',
+            'https://live.staticflickr.com/65535/54713619933_7509bd8c7d_w.jpg?text=Yoga+Mat+Detail+2'
         ],
         alt: 'Premium purple yoga mat with non-slip surface',
         description: 'High-quality yoga mat perfect for all types of yoga practice. Features excellent grip and cushioning.',
