@@ -1089,10 +1089,6 @@ function renderCartPage() {
                 <span>${formatPrice(subtotal)}</span>
             </div>
             <div class="summary-row">
-                <span>Shipping:</span>
-                <span>${shipping === 0 ? 'Free' : formatPrice(shipping)}</span>
-            </div>
-            <div class="summary-row">
                 <span>Total:</span>
                 <span>${formatPrice(total)}</span>
             </div>
