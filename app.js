@@ -56,14 +56,14 @@ const PRODUCTS = [
         price: 550,
         condition: 'new',
         availability: 'available',
-        specs: ['Organic cotton cover', 'Buckwheat hull filling', 'Washable cover', '33cm diameter'],
+        specs: ['Organic cotton cover', 'Washable', '33cm diameter'],
         images: [
             'https://live.staticflickr.com/65535/54712576872_37b404e386_w.jpg?text=Meditation+Mat',
             'https://live.staticflickr.com/65535/54713638304_953d4b7a87_w.jpg?text=Cushion+Detail',
             'https://live.staticflickr.com/65535/54713748250_d9a9d284d3_w.jpg?text=Folded+Detail'
         ],
-        alt: 'Round meditation cushion with organic cotton cover',
-        description: 'Complete meditation set with cushion and mat. Perfect for mindfulness practice.',
+        alt: 'Round meditation yoga mat with organic cotton cover',
+        description: 'Complete meditation mat. Perfect for mindfulness practice.',
         seller: 'Malavika',
         postedDate: '2025-07-15'
     },
@@ -106,36 +106,35 @@ const PRODUCTS = [
     // Buckets & Containers (2 items)
     {
         id: 'bk-001',
-        name: 'Storage Bucket Set',
+        name: 'Storage Bucket',
         category: 'containers',
         price: 350,
         condition: 'good',
         availability: 'available',
         specs: ['Set of 3 buckets', 'Different sizes', 'Stackable design', 'Durable plastic'],
         images: [
-            'https://via.placeholder.com/600x400?text=Storage+Bucket+Set',
-            'https://via.placeholder.com/600x400?text=Stacked+Buckets'
-        ],
-        alt: 'Set of three colorful stackable storage buckets',
-        description: 'Perfect for dorm room organization. Great for storing clothes, books, or cleaning supplies.',
+            'https://live.staticflickr.com/65535/54713636999_8714e7141a_w.jpg'
+       ],
+        alt: 'Colorful storage buckets',
+        description: 'Perfect for dorm room organization. Great for storing water, clothes, or cleaning supplies.',
         seller: 'Tom W.',
         postedDate: '2024-12-19'
     },
     {
         id: 'bk-002',
-        name: 'Laundry Basket',
+        name: 'Green Bucket',
         category: 'containers',
         price: 280,
         condition: 'like-new',
         availability: 'available',
-        specs: ['Large capacity', 'Ventilated design', 'Collapsible', 'Easy carry handles'],
+        specs: ['Large capacity', 'Easy carry handles', 'Durable'],
         images: [
-            'https://via.placeholder.com/600x400?text=Laundry+Basket',
-            'https://via.placeholder.com/600x400?text=Collapsed+Basket'
+            'https://live.staticflickr.com/65535/54713747550_9ebfdbd71e_w.jpg',
+            'https://live.staticflickr.com/65535/54713619323_1fb64cb737_w.jpg'
         ],
-        alt: 'Large white laundry basket with ventilation holes',
-        description: 'Essential for any student. Collapsible design saves space when not in use.',
-        seller: 'Jenny S.',
+        alt: 'Large green bucket with ventilation holes',
+        description: 'Essential for any student, multiuse bucket.',
+        seller: 'Ramukaka',
         postedDate: '2024-12-17'
     },
 
@@ -267,88 +266,54 @@ const PRODUCTS = [
     // Books (5 items)
     {
         id: 'bk-101',
-        name: 'Organic Chemistry Textbook',
+        name: 'The Last Lecture',
         category: 'books',
         price: 850,
         condition: 'good',
         availability: 'available',
-        specs: ['Latest edition', 'Minimal highlighting', 'All chapters included', 'ISBN: 978-0321803221'],
+        specs: ['Latest edition', 'Minimal highlighting', 'ISBN: 978-0321803221'],
         images: [
-            'https://via.placeholder.com/600x400?text=Organic+Chemistry+Book',
-            'https://via.placeholder.com/600x400?text=Book+Interior'
+            'https://live.staticflickr.com/65535/54713746485_5e29198a6c_w.jpg',
+            'https://live.staticflickr.com/65535/54712574757_488a5a5ff0_w.jpg'
         ],
-        alt: 'Organic Chemistry textbook with molecular structure on cover',
-        description: 'Essential textbook for chemistry students. Latest edition with minimal wear.',
-        seller: 'Dr. Smith Class',
+        alt: 'Novel: The Last Lecture',
+        description: 'Only read once, in very good condition, interesting book.',
+        seller: 'Upsy',
         postedDate: '2024-12-21'
     },
     {
         id: 'bk-102',
-        name: 'Calculus Study Guide',
+        name: 'The Picture of Dorian Gray',
         category: 'books',
         price: 450,
         condition: 'like-new',
         availability: 'available',
-        specs: ['Step-by-step solutions', 'Practice problems', 'Formula reference', 'Spiral bound'],
+        specs: ['By Oscar Wilde', 'Classic Book', 'Mint condition'],
         images: [
-            'https://via.placeholder.com/600x400?text=Calculus+Study+Guide',
-            'https://via.placeholder.com/600x400?text=Guide+Pages'
+            'https://live.staticflickr.com/65535/54713636229_b280cf119f_n.jpg',
+            'https://live.staticflickr.com/65535/54713636364_056d461ff4_w.jpg'
         ],
-        alt: 'Calculus study guide with mathematical formulas on cover',
-        description: 'Comprehensive study guide with worked examples and practice problems.',
-        seller: 'Math Tutor',
+        alt: 'The Picture of Dorian Gray by Oscar Wilde',
+        description: 'Classic novel in perfect mint condition.',
+        seller: 'Vinaya Sathyanarayana',
         postedDate: '2024-12-20'
     },
     {
         id: 'bk-103',
-        name: 'Psychology Textbook',
+        name: 'CAT Career Launcher Arithmetic Book',
         category: 'books',
         price: 750,
         condition: 'good',
         availability: 'available',
         specs: ['13th edition', 'Some highlighting', 'Complete text', 'Access code used'],
         images: [
-            'https://via.placeholder.com/600x400?text=Psychology+Textbook',
-            'https://via.placeholder.com/600x400?text=Psychology+Content'
+            'https://live.staticflickr.com/65535/54713746560_ab8bf983d9_w.jpg',
+            'https://live.staticflickr.com/65535/54713636899_2e1296e305_w.jpg'
         ],
-        alt: 'Introduction to Psychology textbook with brain illustration',
-        description: 'Comprehensive introduction to psychology. Great for intro psych courses.',
-        seller: 'Psych Student',
+        alt: 'CAT Career Launcher Arithmetic Book',
+        description: 'Comprehensive introduction to arithmetic. Great for intro CAT courses.',
+        seller: 'Dhoomketu',
         postedDate: '2024-12-19'
-    },
-    {
-        id: 'bk-104',
-        name: 'Programming Book Set',
-        category: 'books',
-        price: 1200,
-        condition: 'like-new',
-        availability: 'available',
-        specs: ['3 book set', 'Python, Java, C++', 'Latest editions', 'Excellent condition'],
-        images: [
-            'https://via.placeholder.com/600x400?text=Programming+Book+Set',
-            'https://via.placeholder.com/600x400?text=Code+Examples'
-        ],
-        alt: 'Set of three programming books covering Python, Java, and C++',
-        description: 'Complete programming reference set. Perfect for computer science students.',
-        seller: 'CS Graduate',
-        postedDate: '2024-12-18'
-    },
-    {
-        id: 'bk-105',
-        name: 'Literature Anthology',
-        category: 'books',
-        price: 600,
-        condition: 'good',
-        availability: 'sold',
-        specs: ['Classic literature', 'Annotated edition', 'Multiple authors', 'Course required'],
-        images: [
-            'https://via.placeholder.com/600x400?text=Literature+Anthology',
-            'https://via.placeholder.com/600x400?text=Classic+Texts'
-        ],
-        alt: 'Literature anthology with classic book covers collage',
-        description: 'Required reading for English literature courses. Annotated for better understanding.',
-        seller: 'English Major',
-        postedDate: '2024-12-17'
     },
 
     // Stationery (5+ items)
@@ -463,7 +428,7 @@ const PRODUCTS = [
         specs: ['Metal Chair', 'Adjustable height', 'Sturdy construction', 'Has cusioning'],
         images: [
             'https://live.staticflickr.com/65535/54713617358_0f0b84a130_w.jpg',
-            'https://live.staticflickr.com/65535/54713829980_1d70f5e97c_m.jpg'
+            'https://live.staticflickr.com/65535/54713636654_6533aed4dd_n.jpg'
         ],
         alt: 'Metal Chair',
         description: 'Sturdy metal chair perfect for students.',
@@ -498,8 +463,8 @@ const PRODUCTS = [
         availability: 'available',
         specs: ['Compact size', 'Energy efficient', 'Beautiful Design', 'Halo Effect'],
         images: [
-            'https://live.staticflickr.com/65535/54713636799_2854869a13_w.jpg',
-            'https://www.flickr.com/photos/203393866@N08/54713746285/in/dateposted-public/'
+            'https://live.staticflickr.com/65535/54713414291_069b085921_w.jpg',
+            'https://live.staticflickr.com/65535/54713746285_87a18a1e62_w.jpg'
         ],
         alt: 'Whale Globe Lamp',
         description: 'Perfect for dorm rooms.',
@@ -515,46 +480,46 @@ const PRODUCTS = [
         availability: 'available',
         specs: ['LED bulb', 'Adjustable arm', 'Touch control', 'USB charging port'],
         images: [
-            'https://via.placeholder.com/600x400?text=LED+Desk+Lamp',
-            'https://via.placeholder.com/600x400?text=Lamp+Adjustable'
+            'https://live.staticflickr.com/65535/54713747115_bca446f884_w.jpg',
+            'https://live.staticflickr.com/65535/54713747645_07f68e2647_w.jpg'
         ],
-        alt: 'Modern LED desk lamp with adjustable arm and touch controls',
-        description: 'Modern LED desk lamp with convenient USB charging port. Perfect for late-night studying.',
-        seller: 'Tech Student',
+        alt: 'Modern multipurpose kettle for boiling water, cooking, and reheating',
+        description: 'Kettle perfect for students in dorm rooms, quick and convenient.,
+        seller: 'Verma',
         postedDate: '2024-12-12'
     },
     {
         id: 'mc-004',
-        name: 'Bluetooth Speaker',
+        name: 'Apple Airpods with case',
         category: 'miscellaneous',
-        price: 850,
+        price: 12000,
         condition: 'good',
         availability: 'available',
         specs: ['Wireless connectivity', 'Long battery life', 'Water resistant', 'Compact size'],
         images: [
-            'https://via.placeholder.com/600x400?text=Bluetooth+Speaker',
-            'https://via.placeholder.com/600x400?text=Speaker+Playing'
+            'https://live.staticflickr.com/65535/54713414436_0b06482f06_w.jpg',
+            'https://live.staticflickr.com/65535/54713414496_c273512921_w.jpg'
         ],
-        alt: 'Portable Bluetooth speaker with wireless connectivity',
-        description: 'Great sound quality in a portable package. Perfect for dorm parties or study music.',
-        seller: 'Music Lover',
+        alt: 'Apple Airpods with wireless connectivity',
+        description: 'Great sound quality in a portable package. Perfect for dorm use or study music.',
+        seller: 'Saregama',
         postedDate: '2024-12-11'
     },
     {
         id: 'mc-005',
-        name: 'Electric Kettle',
+        name: 'Brown and Beige Curtains',
         category: 'miscellaneous',
-        price: 650,
+        price: 350,
         condition: 'like-new',
         availability: 'sold',
         specs: ['Fast boiling', 'Auto shut-off', 'Cordless design', '1.7L capacity'],
         images: [
-            'https://via.placeholder.com/600x400?text=Electric+Kettle',
-            'https://via.placeholder.com/600x400?text=Kettle+Boiling'
+            'https://live.staticflickr.com/65535/54712576507_c7e9d824cc_w.jpg',
+            'https://live.staticflickr.com/65535/54712575817_1406abf708_w.jpg'
         ],
-        alt: 'Stainless steel electric kettle with cordless design',
-        description: 'Quick and convenient way to boil water for tea, coffee, or instant meals.',
-        seller: 'Tea Enthusiast',
+        alt: 'Colourful beige and brown striped sheer curtains',
+        description: 'Beautiful curtains for dorm room.',
+        seller: 'Somansha',
         postedDate: '2024-12-10'
     }
 ];
