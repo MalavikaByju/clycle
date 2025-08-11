@@ -408,19 +408,18 @@ const PRODUCTS = [
     // Stationery (5+ items)
     {
         id: 'st-001',
-        name: 'Scientific Calculator',
+        name: 'Cute Cat Diary',
         category: 'stationery',
-        price: 1500,
-        condition: 'like-new',
+        price: 230,
+        condition: 'new',
         availability: 'available',
-        specs: ['Graphing capability', 'Programmable', 'Solar powered', 'Protective case included'],
+        specs: ['Unopened', 'Cute Cat Diary', 'Has Pen', 'Aesthetic'],
         images: [
-            'https://via.placeholder.com/600x400?text=Scientific+Calculator',
-            'https://via.placeholder.com/600x400?text=Calculator+Display'
+            'https://live.staticflickr.com/65535/54713638819_3df11f0aca_w.jpg',
         ],
-        alt: 'Advanced scientific calculator with graphing display',
-        description: 'High-end scientific calculator perfect for advanced math and science courses.',
-        seller: 'Engineering Student',
+        alt: 'Cute Cat Diary',
+        description: 'Aesthetic Unopened Brown Cat Diary with Pen',
+        seller: 'Mr. Verms',
         postedDate: '2024-12-21'
     },
     {
@@ -494,79 +493,78 @@ const PRODUCTS = [
     // Furniture (2+ items)
     {
         id: 'fn-001',
-        name: 'Study Desk',
+        name: 'Bed Study Table',
         category: 'furniture',
-        price: 2500,
+        price: 350,
         condition: 'good',
         availability: 'available',
-        specs: ['Wooden construction', 'Built-in drawers', 'Cable management', '120cm x 60cm'],
+        specs: ['Wooden', 'Built-in drawer', 'Cable management'],
         images: [
-            'https://via.placeholder.com/600x400?text=Study+Desk',
-            'https://via.placeholder.com/600x400?text=Desk+Drawers'
+            'https://live.staticflickr.com/65535/54713413221_8d9d470219_w.jpg',
         ],
         alt: 'Wooden study desk with built-in drawers and cable management',
-        description: 'Perfect study desk for dorm or apartment. Plenty of storage and workspace.',
-        seller: 'Graduating Senior',
+        description: 'Perfect bed study desk for dorm or apartment. Plenty of storage and workspace.',
+        seller: 'Sagheera Sarthak',
         postedDate: '2024-12-16'
     },
     {
         id: 'fn-002',
-        name: 'Bookshelf',
+        name: 'Chair',
         category: 'furniture',
-        price: 1800,
+        price: 700,
         condition: 'good',
         availability: 'available',
-        specs: ['5 shelves', 'Adjustable height', 'Sturdy construction', '180cm height'],
+        specs: ['Metal Chair', 'Adjustable height', 'Sturdy construction', 'Has cusioning'],
         images: [
-            'https://via.placeholder.com/600x400?text=Bookshelf',
-            'https://via.placeholder.com/600x400?text=Books+on+Shelf'
+            'https://live.staticflickr.com/65535/54713617358_0f0b84a130_w.jpg',
+            'https://live.staticflickr.com/65535/54713829980_1d70f5e97c_m.jpg'
         ],
-        alt: 'Tall wooden bookshelf with five adjustable shelves',
-        description: 'Spacious bookshelf perfect for textbooks and personal library. Very sturdy.',
-        seller: 'Moving Student',
+        alt: 'Metal Chair',
+        description: 'Sturdy metal chair perfect for students.',
+        seller: 'Ramukaka',
         postedDate: '2024-12-15'
     },
 
     // Miscellaneous (5 items)
     {
         id: 'mc-001',
-        name: 'Coffee Maker',
+        name: 'IPM05 Term VII Full Notes',
         category: 'miscellaneous',
-        price: 1200,
+        price: 500,
         condition: 'like-new',
         availability: 'available',
-        specs: ['12-cup capacity', 'Programmable timer', 'Auto shut-off', 'Glass carafe'],
+        specs: ['Complete Handwritten Notes', 'For All Subjects', 'Topper Notes', 'Clean Handwriting Notes'],
         images: [
-            'https://via.placeholder.com/600x400?text=Coffee+Maker',
-            'https://via.placeholder.com/600x400?text=Coffee+Brewing'
+            'https://live.staticflickr.com/65535/54713635669_aa3c283400.jpg',
+            'https://live.staticflickr.com/65535/54713635849_5e5210f5fe_w.jpg',
+            'https://live.staticflickr.com/65535/54713636799_2854869a13_w.jpg'
         ],
-        alt: 'Black programmable coffee maker with glass carafe',
-        description: 'Essential for coffee-loving students. Programmable for morning convenience.',
-        seller: 'Caffeine Addict',
+        alt: 'Handwritten Notes for all Subjects.',
+        seller: 'Batch Topper',
         postedDate: '2024-12-14'
     },
     {
         id: 'mc-002',
-        name: 'Mini Fridge',
+        name: 'Whale Globe Lamp',
         category: 'miscellaneous',
-        price: 3500,
+        price: 100,
         condition: 'good',
         availability: 'available',
-        specs: ['Compact size', 'Energy efficient', 'Freezer compartment', 'Dorm approved'],
+        specs: ['Compact size', 'Energy efficient', 'Beautiful Design', 'Halo Effect'],
         images: [
-            'https://via.placeholder.com/600x400?text=Mini+Fridge',
-            'https://via.placeholder.com/600x400?text=Fridge+Interior'
+            'https://live.staticflickr.com/65535/54713636799_2854869a13_w.jpg',
+            'https://www.flickr.com/photos/203393866@N08/54713746285/in/dateposted-public/'
         ],
-        alt: 'Compact mini refrigerator with freezer compartment',
-        description: 'Perfect for dorm rooms. Keeps drinks cold and snacks fresh.',
-        seller: 'Dorm Resident',
+        alt: 'Whale Globe Lamp',
+        description: 'Perfect for dorm rooms.',
+        seller: 'Sujaat',
         postedDate: '2024-12-13'
     },
     {
         id: 'mc-003',
-        name: 'Desk Lamp',
+        name: 'Kettle',
         category: 'miscellaneous',
-        price: 450,
+        price: 400,
         condition: 'like-new',
         availability: 'available',
         specs: ['LED bulb', 'Adjustable arm', 'Touch control', 'USB charging port'],
