@@ -12,7 +12,7 @@ let allProducts = [];
 
 // ===== ENHANCED PRODUCT DATA =====
 const PRODUCTS = [
-    // Yoga Mats (5 items)
+// Yoga Mats (5 items)
     {
         id: 'ym-001',
         name: 'Yoga Mat',
@@ -42,6 +42,7 @@ const PRODUCTS = [
         images: [
             'https://live.staticflickr.com/65535/54713747590_eddfd7135a_w.jpg?text=Premium+Yoga+Mat',
             'https://live.staticflickr.com/65535/54712576887_69fbc257b8_w.jpg?text=Folded+Mat'
+            'https://live.staticflickr.com/65535/54713620138_6cc189e437_w.jpg?text=Mat+Detail'
         ],
         alt: 'Compact foldable premium yoga mat in dark green',
         description: 'Perfect for students who practice yoga in dorms or travel frequently. Ultra-portable design.',
@@ -50,14 +51,14 @@ const PRODUCTS = [
     },
     {
         id: 'ym-003',
-        name: 'Meditation Set',
+        name: 'Meditation Mat',
         category: 'yoga-mats',
-        price: 950,
+        price: 550,
         condition: 'new',
         availability: 'available',
         specs: ['Organic cotton cover', 'Buckwheat hull filling', 'Washable cover', '33cm diameter'],
         images: [
-            'https://live.staticflickr.com/65535/54712576872_37b404e386_w.jpg?text=Meditation+Set',
+            'https://live.staticflickr.com/65535/54712576872_37b404e386_w.jpg?text=Meditation+Mat',
             'https://live.staticflickr.com/65535/54713638304_953d4b7a87_w.jpg?text=Cushion+Detail',
             'https://live.staticflickr.com/65535/54713748250_d9a9d284d3_w.jpg?text=Folded+Detail'
         ],
@@ -68,37 +69,38 @@ const PRODUCTS = [
     },
     {
         id: 'ym-004',
-        name: 'Yoga Block Set',
+        name: 'Badminton Racket',
         category: 'yoga-mats',
-        price: 450,
+        price: 550,
         condition: 'like-new',
         availability: 'available',
-        specs: ['EVA foam blocks', 'Set of 2', 'Lightweight', '23cm x 15cm x 10cm each'],
+        specs: ['Graphite composite frame', 'Set of 1', 'Lightweight', 'Includes full cover', 'Grip size G4'],
         images: [
-            'https://via.placeholder.com/600x400?text=Yoga+Block+Set',
-            'https://via.placeholder.com/600x400?text=Blocks+in+Use'
+            'https://live.staticflickr.com/65535/54713415431_887a6a54f3_w.jpg?text=Yonex+Badminton+Racket',
+            'https://live.staticflickr.com/65535/54713637894_dda745f3a9_w.jpg?text=Racket'
+            'https://live.staticflickr.com/65535/54713619878_0bd06c4a4f_w.jpg?text=back'
         ],
-        alt: 'Set of two purple yoga blocks made from EVA foam',
-        description: 'Essential yoga props for beginners and advanced practitioners. Helps with alignment and support.',
-        seller: 'Alex K.',
-        postedDate: '2024-12-12'
+        alt: 'Set of one Yonex Badminton Racket',
+        description: 'Lightweight Yonex badminton racket with a graphite composite frame, designed for intermediate to advanced players. Offers excellent control and maneuverability, making it ideal for fast-paced rallies. Includes a full protective cover for storage and transport.',
+        seller: 'Somansha',
+        postedDate: '2025-07-12'
     },
     {
         id: 'ym-005',
-        name: 'Yoga Strap & Mat Bundle',
+        name: 'Shuttlecock',
         category: 'yoga-mats',
-        price: 1500,
+        price: 40,
         condition: 'good',
         availability: 'sold',
-        specs: ['6mm yoga mat', 'Cotton yoga strap', 'Carrying bag included', 'Complete starter set'],
+        specs: ['Nylon skirt with composite cork base', 'Designed for indoor & outdoor use'],
         images: [
-            'https://via.placeholder.com/600x400?text=Yoga+Bundle+Set',
-            'https://via.placeholder.com/600x400?text=Bundle+Contents'
+            'https://live.staticflickr.com/65535/54713415336_f8406e0cfb_w.jpg?text=Shuttlecock',
+            'https://live.staticflickr.com/65535/54713620498_8c1b5a1f99_w.jpg?text=Detail'
         ],
-        alt: 'Complete yoga starter bundle with mat, strap, and carrying bag',
-        description: 'Everything you need to start your yoga journey. Great value bundle for beginners.',
-        seller: 'Lisa P.',
-        postedDate: '2024-12-10'
+        alt: 'Yonex Mavis 350 nylon shuttlecock',
+        description: 'Durable nylon shuttlecock designed for consistent flight performance and long-lasting play. Suitable for both casual and competitive matches. Comes in a tube of 6 with medium speed rating, perfect for indoor and outdoor badminton sessions.',
+        seller: 'Upagnya',
+        postedDate: '2025-07-10'
     },
 
     // Buckets & Containers (2 items)
@@ -146,87 +148,85 @@ const PRODUCTS = [
         condition: 'good',
         availability: 'available',
         size: 'M',
-        specs: ['Cotton blend', 'University logo', 'Kangaroo pocket', 'Size M'],
+        specs: ['Cotton blend', 'University logo', 'IIMR IPM IC', 'Size M'],
         images: [
-            'https://via.placeholder.com/600x400?text=University+Hoodie',
-            'https://via.placeholder.com/600x400?text=Hoodie+Back'
+            'https://live.staticflickr.com/65535/54713638114_3e5612a569_w.jpg?text=University+Hoodie+Back',
+            'https://live.staticflickr.com/65535/54712577232_5c0876d8fa_w.jpg?text=Hoodie+Logo'
+            'https://live.staticflickr.com/65535/54713747695_462f918e7c_w.jpg?text=Hoodie+Sleeve'
         ],
-        alt: 'Navy blue university hoodie with college logo',
+        alt: 'Black and beige university hoodie with college logo',
         description: 'Official university merchandise. Comfortable and warm for campus life.',
-        seller: 'David C.',
-        postedDate: '2024-12-21'
+        seller: 'Upsyy',
+        postedDate: '2025-07-21'
     },
     {
         id: 'cl-002',
-        name: 'Denim Jacket',
+        name: 'Chill Guy t-shirt',
         category: 'clothing',
-        price: 1200,
+        price: 300,
         condition: 'like-new',
         availability: 'available',
-        size: 'L',
-        specs: ['100% cotton denim', 'Classic fit', 'Button closure', 'Size L'],
+        size: 'S',
+        specs: ['100% cotton denim', 'Classic fit', 'Size s'],
         images: [
-            'https://via.placeholder.com/600x400?text=Denim+Jacket',
-            'https://via.placeholder.com/600x400?text=Jacket+Detail'
+            'https://live.staticflickr.com/65535/54712577442_53c94e1fe6_w.jpg?text=Tshirt+Detail'
         ],
-        alt: 'Classic blue denim jacket with button closure',
-        description: 'Timeless denim jacket perfect for layering. Goes with everything in your wardrobe.',
-        seller: 'Rachel G.',
-        postedDate: '2024-12-20'
+        alt: 'Cool chill guy kapibara cotton t-shirt',
+        description: 'A timeless black cotton t-shirt with a comfortable regular fit. Made from breathable, soft fabric suitable for everyday wear. Minimalist design makes it easy to pair with jeans, shorts, or skirts for a casual, versatile look.',
+        seller: 'Malavika',
+        postedDate: '2025-07-20'
     },
     {
         id: 'cl-003',
-        name: 'Formal Shirt',
+        name: 'Blue Kathakali print t-shirt',
         category: 'clothing',
-        price: 650,
+        price: 450,
         condition: 'good',
         availability: 'available',
         size: 'M',
         specs: ['Cotton blend', 'Wrinkle-resistant', 'Regular fit', 'Size M'],
         images: [
-            'https://via.placeholder.com/600x400?text=Formal+Shirt',
-            'https://via.placeholder.com/600x400?text=Shirt+Collar'
+            'https://live.staticflickr.com/65535/54713619803_19be66e86d_w.jpg?text=tshirt+detail',
         ],
-        alt: 'White formal dress shirt with button-down collar',
-        description: 'Perfect for presentations, interviews, and formal events. Professional appearance guaranteed.',
-        seller: 'James H.',
+        alt: 'Casual blue crew neck t-shirt with short sleeves',
+        description: 'A soft, lightweight crew neck t-shirt in a vibrant blue shade. Designed for comfort and versatility, perfect for daily wear or casual outings. Easy to style with jeans, shorts, or joggers.',
+        seller: 'Upagnya',
         postedDate: '2024-12-19'
     },
     {
         id: 'cl-004',
-        name: 'Winter Coat',
+        name: 'Casual Black Tee',
         category: 'clothing',
-        price: 2500,
+        price: 360,
         condition: 'like-new',
         availability: 'available',
         size: 'L',
-        specs: ['Water-resistant', 'Insulated lining', 'Hood included', 'Size L'],
+        specs: ['Short Sleeves', 'Cotton blend material', 'Breathable & lightweight', 'Size L'],
         images: [
-            'https://via.placeholder.com/600x400?text=Winter+Coat',
-            'https://via.placeholder.com/600x400?text=Coat+Hood'
+            'https://live.staticflickr.com/65535/54712574232_aa3c283400_w.jpg?text=Black+tee'
         ],
-        alt: 'Black winter coat with insulated lining and hood',
-        description: 'Essential for cold weather. Keeps you warm and dry during winter months.',
-        seller: 'Anna B.',
-        postedDate: '2024-12-18'
+        alt: 'Casual black tee with short sleeves and crew neck',
+        description: 'A simple and comfortable casual black tee made from breathable cotton blend fabric. Perfect for everyday wear, layering, or lounging. Minimal design makes it a versatile wardrobe essential.',
+        seller: 'Sanjana',
+        postedDate: '2025-07-18'
     },
     {
         id: 'cl-005',
-        name: 'Casual T-Shirts Pack',
+        name: 'Powder Blue Left Croc',
         category: 'clothing',
-        price: 750,
+        price: 150,
         condition: 'good',
         availability: 'available',
-        size: 'M',
-        specs: ['Pack of 3 shirts', '100% cotton', 'Various colors', 'Size M'],
+        size: '38',
+        specs: ['Slip-on', 'Lightweight & water-friendly', 'Powder Blue', 'Size 38'],
         images: [
-            'https://via.placeholder.com/600x400?text=T-Shirt+Pack',
-            'https://via.placeholder.com/600x400?text=Shirt+Colors'
+            'https://live.staticflickr.com/65535/54713638474_5d3edc58f1_w.jpg?text=Croc+Front',
+            'https://live.staticflickr.com/65535/54712578157_b1893e71f2_n.jpg?text=Croc+Back'
         ],
-        alt: 'Pack of three casual t-shirts in different colors',
-        description: 'Basic wardrobe essentials. Three comfortable t-shirts in different colors.',
-        seller: 'Chris M.',
-        postedDate: '2024-12-17'
+        alt: 'Single powder blue left Croc sandal',
+        description: 'A single powder blue left Croc sandal, lightweight and water-friendly. Comfortable footbed and ventilation ports make it ideal for casual wear, beach trips, or as a spare replacement piece.',
+        seller: 'Malavika',
+        postedDate: '2025-07-17'
     },
     {
         id: 'cl-006',
@@ -281,7 +281,7 @@ const PRODUCTS = [
         description: 'Comfortable everyday jeans with stretch for better fit and movement.',
         seller: 'Mark D.',
         postedDate: '2024-12-14'
-    },
+    },
     {
         id: 'cl-009',
         name: 'Dress Shoes',
