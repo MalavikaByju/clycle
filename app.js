@@ -1052,8 +1052,7 @@ function renderCartPage() {
     })).filter(item => item.id);
     
     const subtotal = calculateCartTotal();
-    const shipping = subtotal > 2000 ? 0 : 100;
-    const total = subtotal + shipping;
+    const total = subtotal;
     
     container.innerHTML = `
         <div class="cart-grid">
