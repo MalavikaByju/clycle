@@ -65,6 +65,7 @@
                                     id="signin-email" 
                                     name="email" 
                                     required 
+                                    pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
                                     aria-describedby="signin-email-error"
                                 >
                                 <div class="error-message" id="signin-email-error" role="alert"></div>
@@ -77,6 +78,7 @@
                                     id="signin-password" 
                                     name="password" 
                                     required
+                                    minlength="6"
                                     aria-describedby="signin-password-error"
                                 >
                                 <div class="error-message" id="signin-password-error" role="alert"></div>
