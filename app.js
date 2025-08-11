@@ -20,50 +20,51 @@ const PRODUCTS = [
         price: 800,
         condition: 'like-new',
         availability: 'available',
-        specs: ['6mm thickness', 'Non-slip surface', 'Eco-friendly TPE material', '183cm x 61cm'],
+        specs: ['2mm thickness', 'Non-slip surface', 'Eco-friendly TPE material', '183cm x 61cm'],
         images: [
-            'https://live.staticflickr.com/65535/54713637664_cbbba9da65_w.jpg?text=Yoga+Mat',
+            'https://live.staticflickr.com/65535/54713638324_a1a659c4d3_w.jpg?text=Yoga+Mat',
             'https://live.staticflickr.com/65535/54713637659_dc7185bc43_w.jpg?text=Yoga+Mat+Detail+1',
             'https://live.staticflickr.com/65535/54713619933_7509bd8c7d_w.jpg?text=Yoga+Mat+Detail+2'
         ],
-        alt: 'Premium purple yoga mat with non-slip surface',
+        alt: 'Premium pink yoga mat with non-slip surface',
         description: 'High-quality yoga mat perfect for all types of yoga practice. Features excellent grip and cushioning.',
-        seller: 'Sarah M.',
-        postedDate: '2024-12-20'
+        seller: 'Thaneswari',
+        postedDate: '2025-07-20'
     },
     {
         id: 'ym-002',
-        name: 'Travel Yoga Mat',
+        name: 'Premium Yoga Mat',
         category: 'yoga-mats',
-        price: 800,
+        price: 1200,
         condition: 'good',
         availability: 'available',
-        specs: ['2mm thickness', 'Lightweight', 'Foldable design', '173cm x 61cm'],
+        specs: ['6mm thickness', 'Lightweight', 'Foldable design', '173cm x 61cm'],
         images: [
-            'https://via.placeholder.com/600x400?text=Travel+Yoga+Mat',
-            'https://via.placeholder.com/600x400?text=Folded+Mat'
+            'https://live.staticflickr.com/65535/54713747590_eddfd7135a_w.jpg?text=Premium+Yoga+Mat',
+            'https://live.staticflickr.com/65535/54712576887_69fbc257b8_w.jpg?text=Folded+Mat'
         ],
-        alt: 'Compact foldable travel yoga mat in blue',
+        alt: 'Compact foldable premium yoga mat in dark green',
         description: 'Perfect for students who practice yoga in dorms or travel frequently. Ultra-portable design.',
-        seller: 'Mike R.',
-        postedDate: '2024-12-18'
+        seller: 'Sanjana',
+        postedDate: '2025-07-18'
     },
     {
         id: 'ym-003',
-        name: 'Meditation Cushion Set',
+        name: 'Meditation Set',
         category: 'yoga-mats',
         price: 950,
         condition: 'new',
         availability: 'available',
         specs: ['Organic cotton cover', 'Buckwheat hull filling', 'Washable cover', '33cm diameter'],
         images: [
-            'https://via.placeholder.com/600x400?text=Meditation+Cushion+Set',
-            'https://via.placeholder.com/600x400?text=Cushion+Detail'
+            'https://live.staticflickr.com/65535/54712576872_37b404e386_w.jpg?text=Meditation+Set',
+            'https://live.staticflickr.com/65535/54713638304_953d4b7a87_w.jpg?text=Cushion+Detail',
+            'https://live.staticflickr.com/65535/54713748250_d9a9d284d3_w.jpg?text=Folded+Detail'
         ],
         alt: 'Round meditation cushion with organic cotton cover',
         description: 'Complete meditation set with cushion and mat. Perfect for mindfulness practice.',
-        seller: 'Emma L.',
-        postedDate: '2024-12-15'
+        seller: 'Malavika',
+        postedDate: '2025-07-15'
     },
     {
         id: 'ym-004',
