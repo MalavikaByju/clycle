@@ -41,7 +41,7 @@ const PRODUCTS = [
         specs: ['6mm thickness', 'Lightweight', 'Foldable design', '173cm x 61cm'],
         images: [
             'https://live.staticflickr.com/65535/54713747590_eddfd7135a_w.jpg?text=Premium+Yoga+Mat',
-            'https://live.staticflickr.com/65535/54712576887_69fbc257b8_w.jpg?text=Folded+Mat'
+            'https://live.staticflickr.com/65535/54712576887_69fbc257b8_w.jpg?text=Folded+Mat',
             'https://live.staticflickr.com/65535/54713620138_6cc189e437_w.jpg?text=Mat+Detail'
         ],
         alt: 'Compact foldable premium yoga mat in dark green',
@@ -77,7 +77,7 @@ const PRODUCTS = [
         specs: ['Graphite composite frame', 'Set of 1', 'Lightweight', 'Includes full cover', 'Grip size G4'],
         images: [
             'https://live.staticflickr.com/65535/54713415431_887a6a54f3_w.jpg?text=Yonex+Badminton+Racket',
-            'https://live.staticflickr.com/65535/54713637894_dda745f3a9_w.jpg?text=Racket'
+            'https://live.staticflickr.com/65535/54713637894_dda745f3a9_w.jpg?text=Racket',
             'https://live.staticflickr.com/65535/54713619878_0bd06c4a4f_w.jpg?text=back'
         ],
         alt: 'Set of one Yonex Badminton Racket',
@@ -151,7 +151,7 @@ const PRODUCTS = [
         specs: ['Cotton blend', 'University logo', 'IIMR IPM IC', 'Size M'],
         images: [
             'https://live.staticflickr.com/65535/54713638114_3e5612a569_w.jpg?text=University+Hoodie+Back',
-            'https://live.staticflickr.com/65535/54712577232_5c0876d8fa_w.jpg?text=Hoodie+Logo'
+            'https://live.staticflickr.com/65535/54712577232_5c0876d8fa_w.jpg?text=Hoodie+Logo',
             'https://live.staticflickr.com/65535/54713747695_462f918e7c_w.jpg?text=Hoodie+Sleeve'
         ],
         alt: 'Black and beige university hoodie with college logo',
@@ -186,7 +186,7 @@ const PRODUCTS = [
         size: 'M',
         specs: ['Cotton blend', 'Wrinkle-resistant', 'Regular fit', 'Size M'],
         images: [
-            'https://live.staticflickr.com/65535/54713619803_19be66e86d_w.jpg?text=tshirt+detail',
+            'https://live.staticflickr.com/65535/54713619803_19be66e86d_w.jpg?text=tshirt+detail'
         ],
         alt: 'Casual blue crew neck t-shirt with short sleeves',
         description: 'A soft, lightweight crew neck t-shirt in a vibrant blue shade. Designed for comfort and versatility, perfect for daily wear or casual outings. Easy to style with jeans, shorts, or joggers.',
@@ -448,7 +448,7 @@ const PRODUCTS = [
         specs: ['Pack of 6 stamps', 'Red colour', 'Bright and Vibrant', 'Medium size'],
         images: [
             'https://live.staticflickr.com/65535/54713636234_3efcf76b60_n.jpg',
-            'hhttps://live.staticflickr.com/65535/54713413516_b874efaea3_w.jpg'
+            'https://live.staticflickr.com/65535/54713413516_b874efaea3_w.jpg'
         ],
         alt: 'Set of six red coloured stamps for notebooks',
         description: 'Essential aesthetic stamps.',
