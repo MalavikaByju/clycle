@@ -427,8 +427,8 @@ const PRODUCTS = [
         availability: 'available',
         specs: ['Metal Chair', 'Adjustable height', 'Sturdy construction', 'Has cusioning'],
         images: [
-            'https://live.staticflickr.com/65535/54713617358_0f0b84a130_w.jpg',
-            'https://live.staticflickr.com/65535/54713636654_6533aed4dd_n.jpg'
+            'https://live.staticflickr.com/65535/54713617358_0f0b84a130_w.jpg?text=clycle',
+            'https://live.staticflickr.com/65535/54713636654_6533aed4dd_n.jpg?text=clycle'
         ],
         alt: 'Metal Chair',
         description: 'Sturdy metal chair perfect for students.',
@@ -446,9 +446,9 @@ const PRODUCTS = [
         availability: 'available',
         specs: ['Complete Handwritten Notes', 'For All Subjects', 'Topper Notes', 'Clean Handwriting Notes'],
         images: [
-            'https://live.staticflickr.com/65535/54713635669_aa3c283400.jpg',
-            'https://live.staticflickr.com/65535/54713635849_5e5210f5fe_w.jpg',
-            'https://live.staticflickr.com/65535/54713636799_2854869a13_w.jpg'
+            'https://live.staticflickr.com/65535/54713635669_aa3c283400.jpg?text=clycle',
+            'https://live.staticflickr.com/65535/54713635849_5e5210f5fe_w.jpg?text=clycle',
+            'https://live.staticflickr.com/65535/54713636799_2854869a13_w.jpg?text=clycle'
         ],
         alt: 'Handwritten Notes for all Subjects.',
         seller: 'Batch Topper',
@@ -463,8 +463,8 @@ const PRODUCTS = [
         availability: 'available',
         specs: ['Compact size', 'Energy efficient', 'Beautiful Design', 'Halo Effect'],
         images: [
-            'https://live.staticflickr.com/65535/54713414291_069b085921_w.jpg',
-            'https://live.staticflickr.com/65535/54713746285_87a18a1e62_w.jpg'
+            'https://live.staticflickr.com/65535/54713414291_069b085921_w.jpg?text=clycle',
+            'https://live.staticflickr.com/65535/54713746285_87a18a1e62_w.jpg?text=clycle'
         ],
         alt: 'Whale Globe Lamp',
         description: 'Perfect for dorm rooms.',
@@ -480,8 +480,8 @@ const PRODUCTS = [
         availability: 'available',
         specs: ['Black', 'Adjustable heating', 'Touch control'],
         images: [
-            'https://live.staticflickr.com/65535/54713747115_bca446f884_w.jpg',
-            'https://live.staticflickr.com/65535/54713747645_07f68e2647_w.jpg'
+            'https://live.staticflickr.com/65535/54713747115_bca446f884_w.jpg?text=clycle',
+            'https://live.staticflickr.com/65535/54713747645_07f68e2647_w.jpg?text=clycle'
         ],
         alt: 'Modern multipurpose kettle for boiling water, cooking, and reheating',
         description: 'Kettle perfect for students in dorm rooms, quick and convenient.',
@@ -497,8 +497,8 @@ const PRODUCTS = [
         availability: 'available',
         specs: ['Wireless connectivity', 'Long battery life', 'Water resistant', 'Compact size'],
         images: [
-            'https://live.staticflickr.com/65535/54713414436_0b06482f06_w.jpg',
-            'https://live.staticflickr.com/65535/54713414496_c273512921_w.jpg'
+            'https://live.staticflickr.com/65535/54713414436_0b06482f06_w.jpg?text=clycle',
+            'https://live.staticflickr.com/65535/54713414496_c273512921_w.jpg?text=clycle'
         ],
         alt: 'Apple Airpods with wireless connectivity',
         description: 'Great sound quality in a portable package. Perfect for dorm use or study music.',
@@ -514,8 +514,8 @@ const PRODUCTS = [
         availability: 'sold',
         specs: ['Pretty curtains', 'Sheer curtains', 'Nice design', 'Good quality'],
         images: [
-            'https://live.staticflickr.com/65535/54712576507_c7e9d824cc_w.jpg',
-            'https://live.staticflickr.com/65535/54712575817_1406abf708_w.jpg'
+            'https://live.staticflickr.com/65535/54712576507_c7e9d824cc_w.jpg?text=clycle',
+            'https://live.staticflickr.com/65535/54712575817_1406abf708_w.jpg?text=clycle'
         ],
         alt: 'Colourful beige and brown striped sheer curtains',
         description: 'Beautiful curtains for dorm room.',
