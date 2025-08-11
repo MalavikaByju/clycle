@@ -22,7 +22,7 @@ const PRODUCTS = [
         availability: 'available',
         specs: ['6mm thickness', 'Non-slip surface', 'Eco-friendly TPE material', '183cm x 61cm'],
         images: [
-            'https://via.placeholder.com/600x400?text=Premium+Yoga+Mat',
+            'https://flic.kr/p/2rmRGtN?text=Yoga+Mat',
             'https://via.placeholder.com/600x400?text=Yoga+Mat+Detail+1',
             'https://via.placeholder.com/600x400?text=Yoga+Mat+Detail+2'
         ],
