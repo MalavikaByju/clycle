@@ -22,7 +22,7 @@ const PRODUCTS = [
         availability: 'available',
         specs: ['2mm thickness', 'Non-slip surface', 'Eco-friendly TPE material', '183cm x 61cm'],
         images: [
-            'https://live.staticflickr.com/65535/54713638324_a1a659c4d3_w.jpg?text=Yoga+Mat',
+            'https://live.staticflickr.com/65535/54713637664_cbbba9da65_w.jpg?text=Yoga+Mat',
             'https://live.staticflickr.com/65535/54713637659_dc7185bc43_w.jpg?text=Yoga+Mat+Detail+1',
             'https://live.staticflickr.com/65535/54713619933_7509bd8c7d_w.jpg?text=Yoga+Mat+Detail+2'
         ],
@@ -139,7 +139,7 @@ const PRODUCTS = [
         postedDate: '2024-12-17'
     },
 
-    // Clothing (10 items)
+    // Clothing (5+ items)
     {
         id: 'cl-001',
         name: 'University Hoodie',
@@ -223,101 +223,47 @@ const PRODUCTS = [
             'https://live.staticflickr.com/65535/54713638474_5d3edc58f1_w.jpg?text=Croc+Front',
             'https://live.staticflickr.com/65535/54712578157_b1893e71f2_n.jpg?text=Croc+Back'
         ],
-        alt: 'Single powder blue left Croc sandal',
+        alt: 'Single powder blue left Croc sandal with ventilation holes and molded sole',
         description: 'A single powder blue left Croc sandal, lightweight and water-friendly. Comfortable footbed and ventilation ports make it ideal for casual wear, beach trips, or as a spare replacement piece.',
         seller: 'Malavika',
         postedDate: '2025-07-17'
     },
     {
         id: 'cl-006',
-        name: 'Sports Shorts',
+        name: 'Powder Blue Right Croc',
         category: 'clothing',
-        price: 400,
+        price: 150,
         condition: 'good',
         availability: 'available',
-        size: 'L',
-        specs: ['Moisture-wicking fabric', 'Elastic waistband', 'Side pockets', 'Size L'],
+        size: '38',
+        specs: ['Material: Croslite™ resin', 'Slip-on comfort design', 'Lightweight & water-friendly', 'Size 38'],
         images: [
-            'https://via.placeholder.com/600x400?text=Sports+Shorts',
-            'https://via.placeholder.com/600x400?text=Shorts+Detail'
+            'https://live.staticflickr.com/65535/54713415656_7b68c80a97_w.jpg?text=Croc+Front',
+            'https://live.staticflickr.com/65535/54712578157_b1893e71f2_n.jpg?text=Croc+Back'
         ],
-        alt: 'Black athletic shorts with side pockets',
-        description: 'Perfect for gym, running, or casual wear. Comfortable and breathable fabric.',
-        seller: 'Kevin L.',
-        postedDate: '2024-12-16'
+        alt: 'Single powder blue right Croc sandal with ventilation holes and cushioned footbed',
+        description: 'A single powder blue right Croc sandal, lightweight and water-friendly. Designed with a cushioned molded footbed and ventilation ports for maximum comfort. Perfect for casual wear, poolside lounging, or replacing a missing right shoe.',
+        seller: 'Malavika',
+        postedDate: '2025-07-16'
     },
     {
         id: 'cl-007',
-        name: 'Sweater',
+        name: 'Pink Tee with Rose Print',
         category: 'clothing',
-        price: 950,
+        price: 550,
         condition: 'like-new',
         availability: 'available',
         size: 'S',
-        specs: ['Wool blend', 'Cable knit pattern', 'Crew neck', 'Size S'],
+        specs: ['Material: 100% Cotton', 'crew neckline', 'Rose print graphic on chest', 'Size S'],
         images: [
-            'https://via.placeholder.com/600x400?text=Cable+Knit+Sweater',
-            'https://via.placeholder.com/600x400?text=Sweater+Pattern'
+            'https://live.staticflickr.com/65535/54713693134_d37d58fb68_m.jpg?text=tee+Front',
         ],
-        alt: 'Cream colored cable knit sweater with crew neck',
-        description: 'Cozy and stylish sweater perfect for cooler days. Classic cable knit design.',
-        seller: 'Sophie T.',
-        postedDate: '2024-12-15'
+        alt: 'Pastel pink t-shirt with a small rose print on the chest',
+        description: 'A soft pastel pink cotton t-shirt featuring a delicate rose print on the chest. Lightweight, breathable, and perfect for casual outings or layering under a jacket. Combines comfort with a subtle, stylish design.',
+        seller: 'Somansha',
+        postedDate: '2025-07-15'
     },
-    {
-        id: 'cl-008',
-        name: 'Jeans',
-        category: 'clothing',
-        price: 1100,
-        condition: 'good',
-        availability: 'sold',
-        size: 'M',
-        specs: ['Slim fit', 'Stretch denim', '5-pocket design', 'Size M (32x32)'],
-        images: [
-            'https://via.placeholder.com/600x400?text=Slim+Fit+Jeans',
-            'https://via.placeholder.com/600x400?text=Jeans+Detail'
-        ],
-        alt: 'Dark blue slim fit jeans with stretch fabric',
-        description: 'Comfortable everyday jeans with stretch for better fit and movement.',
-        seller: 'Mark D.',
-        postedDate: '2024-12-14'
-    },
-    {
-        id: 'cl-009',
-        name: 'Dress Shoes',
-        category: 'clothing',
-        price: 1800,
-        condition: 'like-new',
-        availability: 'available',
-        size: '9',
-        specs: ['Leather upper', 'Formal style', 'Lace-up closure', 'Size 9'],
-        images: [
-            'https://via.placeholder.com/600x400?text=Dress+Shoes',
-            'https://via.placeholder.com/600x400?text=Shoe+Detail'
-        ],
-        alt: 'Black leather dress shoes with lace-up closure',
-        description: 'Professional dress shoes perfect for interviews, presentations, and formal events.',
-        seller: 'Robert F.',
-        postedDate: '2024-12-13'
-    },
-    {
-        id: 'cl-010',
-        name: 'Backpack',
-        category: 'clothing',
-        price: 1350,
-        condition: 'good',
-        availability: 'available',
-        specs: ['Laptop compartment', 'Multiple pockets', 'Padded straps', 'Water-resistant'],
-        images: [
-            'https://via.placeholder.com/600x400?text=Student+Backpack',
-            'https://via.placeholder.com/600x400?text=Backpack+Interior'
-        ],
-        alt: 'Black student backpack with laptop compartment',
-        description: 'Essential student backpack with dedicated laptop compartment and plenty of storage.',
-        seller: 'Maria V.',
-        postedDate: '2024-12-12'
-    },
-
+    
     // Books (5 items)
     {
         id: 'bk-101',
