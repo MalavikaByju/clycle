@@ -113,11 +113,11 @@ const PRODUCTS = [
         availability: 'available',
         specs: ['Set of 3 buckets', 'Different sizes', 'Stackable design', 'Durable plastic'],
         images: [
-            'https://live.staticflickr.com/65535/54713636999_8714e7141a_w.jpg'
+            'https://live.staticflickr.com/65535/54713636999_8714e7141a_w.jpg?text=student+marketplace'
        ],
         alt: 'Colorful storage buckets',
         description: 'Perfect for dorm room organization. Great for storing water, clothes, or cleaning supplies.',
-        seller: 'Tom W.',
+        seller: 'Gayatri',
         postedDate: '2024-12-19'
     },
     {
@@ -129,8 +129,8 @@ const PRODUCTS = [
         availability: 'available',
         specs: ['Large capacity', 'Easy carry handles', 'Durable'],
         images: [
-            'https://live.staticflickr.com/65535/54713747550_9ebfdbd71e_w.jpg',
-            'https://live.staticflickr.com/65535/54713619323_1fb64cb737_w.jpg'
+            'https://live.staticflickr.com/65535/54713747550_9ebfdbd71e_w.jpg?text=college+exchange+platform',
+            'https://live.staticflickr.com/65535/54713619323_1fb64cb737_w.jpg?text=university+item+rental'
         ],
         alt: 'Large green bucket with ventilation holes',
         description: 'Essential for any student, multiuse bucket.',
@@ -273,8 +273,8 @@ const PRODUCTS = [
         availability: 'available',
         specs: ['Latest edition', 'Minimal highlighting', 'ISBN: 978-0321803221'],
         images: [
-            'https://live.staticflickr.com/65535/54713746485_5e29198a6c_w.jpg',
-            'https://live.staticflickr.com/65535/54712574757_488a5a5ff0_w.jpg'
+            'https://live.staticflickr.com/65535/54713746485_5e29198a6c_w.jpg?text=college+exchange+platform',
+            'https://live.staticflickr.com/65535/54712574757_488a5a5ff0_w.jpg?text=college+exchange+platform'
         ],
         alt: 'Novel: The Last Lecture',
         description: 'Only read once, in very good condition, interesting book.',
@@ -290,8 +290,8 @@ const PRODUCTS = [
         availability: 'available',
         specs: ['By Oscar Wilde', 'Classic Book', 'Mint condition'],
         images: [
-            'https://live.staticflickr.com/65535/54713636229_b280cf119f_n.jpg',
-            'https://live.staticflickr.com/65535/54713636364_056d461ff4_w.jpg'
+            'https://live.staticflickr.com/65535/54713636229_b280cf119f_n.jpg?text=student+book+resale',
+            'https://live.staticflickr.com/65535/54713636364_056d461ff4_w.jpg?text=college+exchange+platform'
         ],
         alt: 'The Picture of Dorian Gray by Oscar Wilde',
         description: 'Classic novel in perfect mint condition.',
@@ -307,8 +307,8 @@ const PRODUCTS = [
         availability: 'available',
         specs: ['13th edition', 'Some highlighting', 'Complete text', 'Access code used'],
         images: [
-            'https://live.staticflickr.com/65535/54713746560_ab8bf983d9_w.jpg',
-            'https://live.staticflickr.com/65535/54713636899_2e1296e305_w.jpg'
+            'https://live.staticflickr.com/65535/54713746560_ab8bf983d9_w.jpg?text=student+book+resale',
+            'https://live.staticflickr.com/65535/54713636899_2e1296e305_w.jpg?text=student+book+resale'
         ],
         alt: 'CAT Career Launcher Arithmetic Book',
         description: 'Comprehensive introduction to arithmetic. Great for intro CAT courses.',
@@ -326,7 +326,7 @@ const PRODUCTS = [
         availability: 'available',
         specs: ['Unopened', 'Cute Cat Diary', 'Has Pen', 'Aesthetic'],
         images: [
-            'https://live.staticflickr.com/65535/54713638819_3df11f0aca_w.jpg',
+            'https://live.staticflickr.com/65535/54713638819_3df11f0aca_w.jpg?text=student+book+resale'
         ],
         alt: 'Cute Cat Diary',
         description: 'Aesthetic Unopened Brown Cat Diary with Pen',
@@ -342,7 +342,7 @@ const PRODUCTS = [
         availability: 'available',
         specs: ['Sharpie highlighters in 6 colours- Orange, Yellow, Blue, Green, Pink, Purple'],
         images: [
-            'https://live.staticflickr.com/65535/54713637779_4bd28aa28f_w.jpg'
+            'https://live.staticflickr.com/65535/54713637779_4bd28aa28f_w.jpg?text=student+clothing+swap'
         ],
         alt: 'Complete Sharpie Highlighter Kit',
         description: 'Everything needed for classes. High-quality materials for annotating.',
@@ -358,8 +358,8 @@ const PRODUCTS = [
         availability: 'available',
         specs: ['Pack of 6 stamps', 'Red colour', 'Bright and Vibrant', 'Medium size'],
         images: [
-            'https://live.staticflickr.com/65535/54713636234_3efcf76b60_n.jpg',
-            'https://live.staticflickr.com/65535/54713413516_b874efaea3_w.jpg'
+            'https://live.staticflickr.com/65535/54713636234_3efcf76b60_n.jpg?text=student+book+resale',
+            'https://live.staticflickr.com/65535/54713413516_b874efaea3_w.jpg?text=student+book+resale'
         ],
         alt: 'Set of six red coloured stamps for notebooks',
         description: 'Essential aesthetic stamps.',
@@ -375,8 +375,8 @@ const PRODUCTS = [
         availability: 'available',
         specs: ['Set of 6 Washi Tapes', 'Various colors'],
         images: [
-            'https://live.staticflickr.com/65535/54713637314_56524faa26_w.jpg',
-            'https://live.staticflickr.com/65535/54713638829_8acfb40e0a_w.jpg'
+            'https://live.staticflickr.com/65535/54713637314_56524faa26_w.jpg?text=student+marketplace',
+            'https://live.staticflickr.com/65535/54713638829_8acfb40e0a_w.jpg?text=student+marketplace'
         ],
         alt: 'Collection of various washi tapes in different colors',
         description: 'Complete washi tapes collection. Perfect for students who love variety.',
@@ -392,8 +392,8 @@ const PRODUCTS = [
         availability: 'available',
         specs: ['Multiple compartments', 'Different colours', 'Compact design', 'Very Sticky'],
         images: [
-            'https://live.staticflickr.com/65535/54713620528_6d95c4e7c5_w.jpg',
-            'https://live.staticflickr.com/65535/54713748645_617e5655c5_w.jpg'
+            'https://live.staticflickr.com/65535/54713620528_6d95c4e7c5_w.jpg?text=student+marketplace',
+            'https://live.staticflickr.com/65535/54713748645_617e5655c5_w.jpg?text=student+marketplace'
         ],
         alt: 'Set of Post-Its and Annotating Tabs',
         description: 'Keep your study organized. Multiple compartments for all your sticky note supplies.',
