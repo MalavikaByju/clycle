@@ -408,7 +408,7 @@ p {
 }
 
 .hero-content {
-  text-align: center;
+  text-align: left;
   max-width: 800px;
   margin: 0 auto;
   position: relative;
@@ -432,7 +432,7 @@ p {
 .hero-buttons {
   display: flex;
   gap: var(--spacing-lg);
-  justify-content: center;
+  justify-content: flex-start;  /* Align buttons to the left */
   flex-wrap: wrap;
 }
 
