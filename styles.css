@@ -390,14 +390,11 @@ p {
 
 /* ===== ENHANCED HERO SECTION ===== */
 .hero {
-  background-color: #D4A017;  /* Dark yellow */
-  min-height: 70vh;           /* Tall hero area */
   padding: var(--spacing-3xl) 0;
+  background: linear-gradient(135deg, var(--light-earthy) 0%, #f8f4e6 50%, var(--white) 100%);
   position: relative;
   overflow: hidden;
 }
-
-/* Floating radial accent for depth */
 .hero::before {
   content: '';
   position: absolute;
@@ -405,18 +402,8 @@ p {
   right: -50%;
   width: 100%;
   height: 200%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(141, 151, 88, 0.1) 0%, transparent 70%);
   animation: float 6s ease-in-out infinite;
-  z-index: 0;
-}
-
-/* Subtle overlay to tone down brightness */
-.hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.05);
-  z-index: 1;
 }
 
 .hero-content {
@@ -429,15 +416,14 @@ p {
 }
 
 .hero h1 {
-  color: white; /* Good contrast against dark yellow */
   font-size: var(--font-size-5xl);
   margin-bottom: var(--spacing-lg);
   line-height: var(--leading-tight);
 }
 
 .hero-subtitle {
-  color: rgba(255, 255, 255, 0.9);
   font-size: var(--font-size-xl);
+  color: var(--gray-600);
   margin-bottom: var(--spacing-2xl);
   line-height: var(--leading-relaxed);
 }
@@ -453,7 +439,6 @@ p {
   padding: var(--spacing-lg) var(--spacing-2xl);
   font-size: var(--font-size-lg);
   border-radius: var(--radius-lg);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 /* ===== ENHANCED CARDS ===== */
