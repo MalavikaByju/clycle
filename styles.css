@@ -448,17 +448,6 @@ p {
     overflow: hidden;
 }
 
-.hero-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures video covers the container */
-    z-index: -1; /* Places the video behind the content */
-}
-
-
 /* ===== ENHANCED CARDS ===== */
 .card {
   background: var(--white);
