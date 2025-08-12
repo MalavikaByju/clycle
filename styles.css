@@ -391,7 +391,7 @@ p {
 /* ===== ENHANCED HERO SECTION ===== */
 .hero {
   padding: var(--spacing-3xl) 0;
-  background: linear-gradient(135deg, #f4f1e8 0%, #e8f5e8 50%, #ffffff 100%);
+  linear-gradient(135deg, var(--light-earthy) 0%, #f8f4e6 50%, var(--white) 100%);
   position: relative;
   overflow: hidden;
 }
