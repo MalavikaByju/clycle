@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /cart/
+Disallow: /listings/
+Disallow: /terms/
+Allow: /
+
+Sitemap: https://malavikabyju.github.io/clycle/sitemap.html
