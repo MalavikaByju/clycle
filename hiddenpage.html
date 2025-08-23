@@ -6,85 +6,695 @@
     <title>Clycle — Student Marketplace & Campus Buy and Sell Platform</title>
     <meta name="description" content="Clycle is a secure student marketplace for buying, selling, renting, and repairing items on campus. Build a sustainable campus economy with peer-to-peer student exchange.">
     <style>
-        body {
+        /* WBD Project Requirements styles */
+        .wbd-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 36px;
+        }
+        .wbd-column {
+            flex: 1;
+            min-width: 400px;
+        }
+        .wbd-h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 2rem;
             font-family: Arial, sans-serif;
+        }
+        .wbd-h2 {
+            margin-top: 20px;
+            color: #1a5276;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 3px;
+            font-size: 1.05em;
+            font-family: Arial, sans-serif;
+        }
+        .wbd-ul {
+            list-style: none;
+            padding: 0;
             margin: 0;
-            background: #fafafa;
-            color: #333;
+        }
+        .wbd-li {
+            background: #fff;
+            margin-bottom: 4px;
+            padding: 5px 8px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            font-size: 0.9em;
+        }
+        .wbd-li:nth-child(even) {
+            background: #f1f4f8;
+        }
+        .wbd-task-text {
+            display: block;
+        }
+        .wbd-status-dropdown {
+            margin-top: 2px;
+        }
+        .wbd-select {
+            padding: 2px 4px;
+            font-size: 0.85em;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            background-color: white;
+            cursor: pointer;
+            min-width: 120px;
+        }
+        .wbd-select:focus {
+            outline: 2px solid #007acc;
+            border-color: #007acc;
+        }
+        /* Main site styles */
+        :root {
+            --main-bg: #fafafa;
+            --main-text: #333;
+            --header-bg: #8D9758;
+            --header-text: #fff;
+            --accent: #454135;
+            --card-bg: #fff;
+            --card-border: #ddd;
+            --table-header-bg: #8D9758;
+            --table-header-text: #fff;
+            --table-row-alt: #f9f9f9;
+            --section-spacing: 36px;
+            --heading-spacing: 18px;
+            --font-main: 'Arial', sans-serif;
+            --font-size-base: 17px;
+            --font-size-h1: 2.2rem;
+            --font-size-h2: 1.5rem;
+            --font-size-h3: 1.18rem;
+            --font-size-table: 1rem;
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+            background: var(--main-bg);
+            color: var(--main-text);
+            font-family: var(--font-main);
+            font-size: var(--font-size-base);
+            line-height: 1.7;
+            box-sizing: border-box;
         }
         header, nav, footer {
-            background: #8D9758;
-            color: white;
+            background: var(--header-bg);
+            color: var(--header-text);
             text-align: center;
-            padding: 15px;
+            padding: 18px 10px;
+        }
+        header h1 {
+            font-size: var(--font-size-h1);
+            margin-bottom: 8px;
+            margin-top: 0;
+            letter-spacing: 1px;
+        }
+        nav {
+            font-size: 1.05rem;
+            padding: 10px 0;
         }
         nav a {
-            color: white;
+            color: var(--header-text);
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 18px;
             font-weight: bold;
+            transition: text-decoration 0.2s;
         }
         nav a:hover {
             text-decoration: underline;
         }
         main {
             max-width: 900px;
-            margin: auto;
-            padding: 20px;
+            margin: 0 auto;
+            padding: 28px 18px 0 18px;
         }
-        h1, h2 {
-            color: #454135;
+        section {
+            margin-bottom: var(--section-spacing);
+        }
+        h1, h2, h3 {
+            color: var(--accent);
+            margin-top: var(--heading-spacing);
+            margin-bottom: 12px;
+            font-family: var(--font-main);
+        }
+        h2 {
+            font-size: var(--font-size-h2);
+            margin-top: 30px;
+        }
+        h3 {
+            font-size: var(--font-size-h3);
+            margin-top: 28px;
+        }
+        p, ul, ol, table {
+            font-size: var(--font-size-base);
+            margin-bottom: 14px;
+        }
+        ul, ol {
+            padding-left: 22px;
         }
         .cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
+            gap: 18px;
+            margin-top: 18px;
         }
         .card {
-            background: white;
-            border: 1px solid #ddd;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
             border-radius: 8px;
-            padding: 15px;
+            padding: 18px 14px;
             text-align: center;
+            font-size: var(--font-size-base);
         }
         .btn {
-            background: #8D9758;
-            color: white;
+            background: var(--header-bg);
+            color: var(--header-text);
             padding: 10px 20px;
             display: inline-block;
             margin-top: 15px;
             border-radius: 5px;
             text-decoration: none;
+            font-size: var(--font-size-base);
         }
         .btn:hover {
-            background: #454135;
+            background: var(--accent);
         }
-        footer {
-            margin-top: 40px;
-            font-size: 0.9rem;
+        .team-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 18px;
+            margin-bottom: 18px;
+            font-size: var(--font-size-table);
         }
-        .team {
-            margin-top: 20px;
+        .team-table th, .team-table td {
+            border: 1px solid var(--card-border);
+            padding: 12px 10px;
+            text-align: left;
         }
-        .team-member {
-            margin-bottom: 15px;
-            padding: 10px;
-            background: white;
+        .team-table th {
+            background: var(--table-header-bg);
+            color: var(--table-header-text);
+            font-size: 1.05rem;
+        }
+        .team-table tr:nth-child(even) {
+            background: var(--table-row-alt);
+        }
+        /* Remove box styling for these sections */
+        .stakeholders-section,
+        .consumer-profile-section,
+        .logo-philosophy-section,
+        .tech-stack-section {
+            margin-top: var(--section-spacing);
+            background: none;
+            border: none;
+            border-radius: 0;
+            padding: 0;
+            max-width: 900px;
+        }
+        .stakeholders-section h3,
+        .consumer-profile-section h3,
+        .logo-philosophy-section h3,
+        .tech-stack-section h2 {
+            color: var(--accent);
+            margin-top: var(--heading-spacing);
+            margin-bottom: 12px;
+            text-align: left;
+            font-size: var(--font-size-h3);
+        }
+        .consumer-profile-section .persona {
+            background: #f9f9f9;
+            border-left: 4px solid var(--header-bg);
+            padding: 10px 16px;
+            margin-top: 12px;
+            margin-bottom: 0;
+        }
+        .tech-stack-section h2 {
+            text-align: left;
+            font-size: var(--font-size-h2);
+        }
+        .tech-stack-section ol {
+            margin-left: 20px;
+        }
+        .tech-stack-section code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.98em;
+        }
+        .carbon-footprint-section {
+            margin-top: var(--section-spacing);
+            text-align: center;
+        }
+        .carbon-footprint-section img {
+            max-width: 350px;
+            width: 100%;
+            height: auto;
             border-radius: 8px;
-            border: 1px solid #ddd;
+            border: 1px solid var(--card-border);
+            margin-top: 15px;
+            background: #eee;
         }
-        .team-member h4 {
-            margin: 5px 0;
-            color: #8D9758;
+        .qr-section {
+            margin-top: var(--section-spacing);
+            text-align: center;
+        }
+        .qr-section img {
+            max-width: 180px;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid var(--card-border);
+            margin-top: 15px;
+            background: #eee;
+        }
+        @media (max-width: 600px) {
+            main {
+                padding: 12px 4vw 0 4vw;
+            }
+            .cards {
+                grid-template-columns: 1fr;
+            }
+            .team-table th, .team-table td {
+                padding: 8px 4px;
+            }
+            .wbd-container {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
 <body>
 
+<!-- WBD Project Requirements Section -->
+<div style="background-color:#f8f9fa; padding:0 0 10px 0; margin:0;">
+    <h1 class="wbd-h1">WBD Project Requirements</h1>
+    <div class="wbd-container">
+        <div class="wbd-column">
+            <h2 class="wbd-h2">📋 Project Setup & Documentation</h2>
+            <ul class="wbd-ul">
+                <li class="wbd-li"><span class="wbd-task-text"><strong>Table with team number, member names, roll numbers</strong></span>
+                    <div class="wbd-status-dropdown">
+                        <select class="wbd-select">
+                            <option value="not-applicable" selected>Not applicable</option>
+                            <option value="done">Done</option>
+                            <option value="to-be-done">To be done</option>
+                            <option value="attached">Attached</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="wbd-li"><span class="wbd-task-text"><strong>Stakeholders listed</strong></span>
+                    <div class="wbd-status-dropdown">
+                        <select class="wbd-select">
+                            <option value="not-applicable" selected>Not applicable</option>
+                            <option value="done">Done</option>
+                            <option value="to-be-done">To be done</option>
+                            <option value="attached">Attached</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="wbd-li"><span class="wbd-task-text"><strong>Submission</strong>: Complete & submit before deadline</span>
+                    <div class="wbd-status-dropdown">
+                        <select class="wbd-select">
+                            <option value="not-applicable" selected>Not applicable</option>
+                            <option value="done">Done</option>
+                            <option value="to-be-done">To be done</option>
+                            <option value="attached">Attached</option>
+                        </select>
+                    </div>
+                </li>
+            </ul>
+            <h2 class="wbd-h2">🏗 Core Technical Requirements</h2>
+            <ul class="wbd-ul">
+                <li class="wbd-li"><span class="wbd-task-text"><strong>Stack</strong>: Use HTML, CSS, JavaScript</span>
+                    <div class="wbd-status-dropdown">
+                        <select class="wbd-select">
+                            <option value="not-applicable" selected>Not applicable</option>
+                            <option value="done">Done</option>
+                            <option value="to-be-done">To be done</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="wbd-li"><span class="wbd-task-text"><strong>Page Count</strong>: 5–6 main pages</span>
+                    <div class="wbd-status-dropdown">
+                        <select class="wbd-select">
+                            <option value="not-applicable" selected>Not applicable</option>
+                            <option value="done">Done</option>
+                            <option value="to-be-done">To be done</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="wbd-li"><span class="wbd-task-text"><strong>Semantic HTML</strong>: Use &lt;header&gt;, &lt;footer&gt;, &lt;nav&gt;, etc.</span>
+                    <div class="wbd-status-dropdown">
+                        <select class="wbd-select">
+                            <option value="not-applicable" selected>Not applicable</option>
+                            <option value="done">Done</option>
+                            <option value="to-be-done">To be done</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="wbd-li"><span class="wbd-task-text"><strong>Central CSS</strong>: Single global stylesheet</span>
+                    <div class="wbd-status-dropdown">
+                        <select class="wbd-select">
+                            <option value="not-applicable" selected>Not applicable</option>
+                            <option value="done">Done</option>
+                            <option value="to-be-done">To be done</option>
+                            <option value="attached">Attached</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="wbd-li"><span class="wbd-task-text"><strong>Framework Use</strong>: Bootstrap (or approved alternative)</span>
+                    <div class="wbd-status-dropdown">
+                        <select class="wbd-select">
+                            <option value="not-applicable" selected>Not applicable</option>
+                            <option value="done">Done</option>
+                            <option value="to-be-done">To be done</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="wbd-li"><span class="wbd-task-text"><strong>Accessible Forms & Validation</strong></span>
+                    <div class="wbd-status-dropdown">
+                        <select class="wbd-select">
+                            <option value="not-applicable" selected>Not applicable</option>
+                            <option value="done">Done</option>
+                            <option value="to-be-done">To be done</option>
+                        </select>
+                    </div>
+                </li>
+            </ul>
+            <h2 class="wbd-h2">🔒 Security & Configuration Files</h2>
+            <ul class="wbd-ul">
+                <li class="wbd-li"><span class="wbd-task-text"><strong>Security.txt</strong>: At site root</span>
+                    <div class="wbd-status-dropdown">
+                        <select class="wbd-select">
+                            <option value="not-applicable" selected>Not applicable</option>
+                            <option value="done">Done</option>
+                            <option value="to-be-done">To be done</option>
+                            <option value="attached">Attached</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="wbd-li"><span class="wbd-task-text"><strong>Robots.txt</strong>: At site root</span>
+                    <div class="wbd-status-dropdown">
+                        <select class="wbd-select">
+                            <option value="not-applicable" selected>Not applicable</option>
+                            <option value="done">Done</option>
+                            <option value="to-be-done">To be done</option>
+                            <option value="attached">Attached</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="wbd-li"><span class="wbd-task-text"><strong>HTTPS (SSL)</strong>: Serve site securely</span>
+                    <div class="wbd-status-dropdown">
+                        <select class="wbd-select">
+                            <option value="not-applicable" selected>Not applicable</option>
+                            <option value="done">Done</option>
+                            <option value="to-be-done">To be done</option>
+                        </select>
+                    </div>
+                </li>
+            </ul>
+            <h2 class="wbd-h2">🔐 Hidden/Instructors-only Page</h2>
+            <ul class="wbd-ul">
+                <li class="wbd-li"><span class="wbd-task-text"><strong>Access Restriction</strong>: Instructor only</span>
+                    <div class="wbd-status-dropdown">
+                        <select class="wbd-select">
+                            <option value="not-applicable" selected>Not applicable</option>
+                            <option value="done">Done</option>
+                            <option value="to-be-done">To be done</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="wbd-li"><span class="wbd-task-text"><strong>Handwritten HTML</strong>: No auto-generation</span>
+                    <div class="wbd-status-dropdown">
+                        <select class="wbd-select">
+                            <option value="not-applicable" selected>Not applicable</option>
+                            <option value="done">Done</option>
+                            <option value="to-be-done">To be done</option>
+                            <option value="attached">Attached</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="wbd-li"><span class="wbd-task-text"><strong>Team Table</strong>: Members & roles listed</span>
+                    <div class="wbd-status-dropdown">
+                        <select class="wbd-select">
+                            <option value="not-applicable" selected>Not applicable</option>
+                            <option value="done">Done</option>
+                            <option value="to-be-done">To be done</option>
+                            <option value="attached">Attached</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="wbd-li"><span class="wbd-task-text"><strong>Testimonial</strong>: Added</span>
+                    <div class="wbd-status-dropdown">
+                        <select class="wbd-select">
+                            <option value="not-applicable" selected>Not applicable</option>
+                            <option value="done">Done</option>
+                            <option value="to-be-done">To be done</option>
+                            <option value="attached">Attached</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="wbd-li"><span class="wbd-task-text"><strong>Consumer Profile</strong>: Who are you catering to?</span>
+                    <div class="wbd-status-dropdown">
+                        <select class="wbd-select">
+                            <option value="not-applicable" selected>Not applicable</option>
+                            <option value="done">Done</option>
+                            <option value="to-be-done">To be done</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="wbd-li"><span class="wbd-task-text"><strong>Design Philosophy</strong>: Written in the Hidden page</span>
+                    <div class="wbd-status-dropdown">
+                        <select class="wbd-select">
+                            <option value="not-applicable" selected>Not applicable</option>
+                            <option value="done">Done</option>
+                            <option value="to-be-done">To be done</option>
+                            <option value="attached">Attached</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="wbd-li"><span class="wbd-task-text"><strong>Philosophy of logo</strong>: Documented reasoning behind logo design</span>
+                    <div class="wbd-status-dropdown">
+                        <select class="wbd-select">
+                            <option value="not-applicable" selected>Not applicable</option>
+                            <option value="done">Done</option>
+                            <option value="to-be-done">To be done</option>
+                            <option value="attached">Attached</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="wbd-li"><span class="wbd-task-text"><strong>Survey</strong>: Survey for design</span>
+                    <div class="wbd-status-dropdown">
+                        <select class="wbd-select">
+                            <option value="not-applicable" selected>Not applicable</option>
+                            <option value="done">Done</option>
+                            <option value="to-be-done">To be done</option>
+                            <option value="attached">Attached</option>
+                        </select>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="wbd-column">
+            <h2 class="wbd-h2">🎨 Design & User Experience</h2>
+            <ul class="wbd-ul">
+                <li class="wbd-li"><span class="wbd-task-text"><strong>Consistent Design</strong>: Uniform look & documented method</span>
+                    <div class="wbd-status-dropdown">
+                        <select class="wbd-select">
+                            <option value="not-applicable" selected>Not applicable</option>
+                            <option value="done">Done</option>
+                            <option value="to-be-done">To be done</option>
+                            <option value="attached">Attached</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="wbd-li"><span class="wbd-task-text"><strong>Mobile Responsive</strong>: Works on phones & tablets</span>
+                    <div class="wbd-status-dropdown">
+                        <select class="wbd-select">
+                            <option value="not-applicable" selected>Not applicable</option>
+                            <option value="done">Done</option>
+                            <option value="to-be-done">To be done</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="wbd-li"><span class="wbd-task-text"><strong>Favicon</strong>: Add favicon</span>
+                    <div class="wbd-status-dropdown">
+                        <select class="wbd-select">
+                            <option value="not-applicable" selected>Not applicable</option>
+                            <option value="done">Done</option>
+                            <option value="to-be-done">To be done</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="wbd-li"><span class="wbd-task-text"><strong>Icons on Links</strong>: Icon for every navigation/action link</span>
+                    <div class="wbd-status-dropdown">
+                        <select class="wbd-select">
+                            <option value="not-applicable" selected>Not applicable</option>
+                            <option value="done">Done</option>
+                            <option value="to-be-done">To be done</option>
+                        </select>
+                    </div>
+                </li>
+            </ul>
+            <h2 class="wbd-h2">♿ Accessibility & Performance</h2>
+            <ul class="wbd-ul">
+                <li class="wbd-li"><span class="wbd-task-text"><strong>Accessibility</strong>: Screen-readable & accessible</span>
+                    <div class="wbd-status-dropdown">
+                        <select class="wbd-select">
+                            <option value="not-applicable" selected>Not applicable</option>
+                            <option value="done">Done</option>
+                            <option value="to-be-done">To be done</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="wbd-li"><span class="wbd-task-text"><strong>Performance</strong>: Optimized for fast rendering</span>
+                    <div class="wbd-status-dropdown">
+                        <select class="wbd-select">
+                            <option value="not-applicable" selected>Not applicable</option>
+                            <option value="done">Done</option>
+                            <option value="to-be-done">To be done</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="wbd-li"><span class="wbd-task-text"><strong>Images</strong>: Optimized image on every page</span>
+                    <div class="wbd-status-dropdown">
+                        <select class="wbd-select">
+                            <option value="not-applicable" selected>Not applicable</option>
+                            <option value="done">Done</option>
+                            <option value="to-be-done">To be done</option>
+                            <option value="attached">Attached</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="wbd-li"><span class="wbd-task-text"><strong>Image Optimization</strong>: Documented</span>
+                    <div class="wbd-status-dropdown">
+                        <select class="wbd-select">
+                            <option value="not-applicable" selected>Not applicable</option>
+                            <option value="done">Done</option>
+                            <option value="to-be-done">To be done</option>
+                            <option value="attached">Attached</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="wbd-li"><span class="wbd-task-text"><strong>Figure Labelling</strong>: "Lower is better" / "Higher is better"</span>
+                    <div class="wbd-status-dropdown">
+                        <select class="wbd-select">
+                            <option value="not-applicable" selected>Not applicable</option>
+                            <option value="done">Done</option>
+                            <option value="to-be-done">To be done</option>
+                        </select>
+                    </div>
+                </li>
+            </ul>
+            <h2 class="wbd-h2">🔍 SEO & Marketing</h2>
+            <ul class="wbd-ul">
+                <li class="wbd-li"><span class="wbd-task-text"><strong>SEO Keywords</strong>: Selected with reasoning</span>
+                    <div class="wbd-status-dropdown">
+                        <select class="wbd-select">
+                            <option value="not-applicable" selected>Not applicable</option>
+                            <option value="done">Done</option>
+                            <option value="to-be-done">To be done</option>
+                            <option value="attached">Attached</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="wbd-li"><span class="wbd-task-text"><strong>SEO Ranking Check</strong>: Recorded</span>
+                    <div class="wbd-status-dropdown">
+                        <select class="wbd-select">
+                            <option value="not-applicable" selected>Not applicable</option>
+                            <option value="done">Done</option>
+                            <option value="to-be-done">To be done</option>
+                            <option value="attached">Attached</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="wbd-li"><span class="wbd-task-text"><strong>Sitemap</strong>: HTML or XML created</span>
+                    <div class="wbd-status-dropdown">
+                        <select class="wbd-select">
+                            <option value="not-applicable" selected>Not applicable</option>
+                            <option value="done">Done</option>
+                            <option value="to-be-done">To be done</option>
+                            <option value="attached">Attached</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="wbd-li"><span class="wbd-task-text"><strong>Social Buttons</strong>: Implemented</span>
+                    <div class="wbd-status-dropdown">
+                        <select class="wbd-select">
+                            <option value="not-applicable" selected>Not applicable</option>
+                            <option value="done">Done</option>
+                            <option value="to-be-done">To be done</option>
+                        </select>
+                    </div>
+                </li>
+            </ul>
+            <h2 class="wbd-h2">🚀 Hosting & Deployment</h2>
+            <ul class="wbd-ul">
+                <li class="wbd-li"><span class="wbd-task-text"><strong>Public Availability</strong>: Site & code publicly accessible</span>
+                    <div class="wbd-status-dropdown">
+                        <select class="wbd-select">
+                            <option value="not-applicable" selected>Not applicable</option>
+                            <option value="done">Done</option>
+                            <option value="to-be-done">To be done</option>
+                            <option value="attached">Attached</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="wbd-li"><span class="wbd-task-text"><strong>Public URL</strong>: For robots.txt provided</span>
+                    <div class="wbd-status-dropdown">
+                        <select class="wbd-select">
+                            <option value="not-applicable" selected>Not applicable</option>
+                            <option value="done">Done</option>
+                            <option value="to-be-done">To be done</option>
+                            <option value="attached">Attached</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="wbd-li"><span class="wbd-task-text"><strong>Ngrok Hosting</strong>: Temporary testing via ngrok</span>
+                    <div class="wbd-status-dropdown">
+                        <select class="wbd-select">
+                            <option value="not-applicable" selected>Not applicable</option>
+                            <option value="done">Done</option>
+                            <option value="to-be-done">To be done</option>
+                            <option value="attached">Attached</option>
+                        </select>
+                    </div>
+                </li>
+            </ul>
+            <h2 class="wbd-h2">🎯 Special Features</h2>
+            <ul class="wbd-ul">
+                <li class="wbd-li"><span class="wbd-task-text"><strong>Google Map</strong>: On "About Us" page</span>
+                    <div class="wbd-status-dropdown">
+                        <select class="wbd-select">
+                            <option value="not-applicable" selected>Not applicable</option>
+                            <option value="done">Done</option>
+                            <option value="to-be-done">To be done</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="wbd-li"><span class="wbd-task-text"><strong>LinkedIn Profile Link</strong>: Optional</span>
+                    <div class="wbd-status-dropdown">
+                        <select class="wbd-select">
+                            <option value="not-applicable" selected>Not applicable</option>
+                            <option value="done">Done</option>
+                            <option value="to-be-done">To be done</option>
+                        </select>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
 <header>
-    <h1>Clycle — Student Marketplace</h1>
-    <p>Campus Buy & Sell Platform | Secure, Sustainable, Student-to-Student Trading</p>
+    <div style="display: flex; align-items: center; justify-content: center; gap: 22px;">
+        <img src="https://live.staticflickr.com/65535/54739265629_7a6cd8a27c_n.jpg?text=Logo" alt="Clycle Logo" style="width:80px;height:80px;border-radius:50%;border:2px solid #8D9758; background:#fff; object-fit:cover;">
+        <div style="text-align: left;">
+            <h1 style="margin-bottom: 6px; margin-top: 0;">Clycle — Student Marketplace</h1>
+            <p style="margin-top: 0;">Campus Buy &amp; Sell Platform | Secure, Sustainable, Student-to-Student Trading</p>
+        </div>
+    </div>
 </header>
 
 <nav>
@@ -140,35 +750,97 @@
         <p><strong>Rich Brown</strong> — grounding color for serious yet approachable content.</p>
 
         <h3>Our Team</h3>
-        <div class="team">
-            <div class="team-member">
-                <h4>Kashish Kerul Javeri — HR Head - IPM05108</h4>
-                <p>Keeps the team running smoothly and makes sure no one burns out.</p>
-            </div>
-            <div class="team-member">
-                <h4>Malavika Byju — CFO - IPM05113</h4>
-                <p>Manages the numbers so our sustainability dreams stay financially real.</p>
-            </div>
-            <div class="team-member">
-                <h4>Nadella Bhanu Sanjana — Product Development Head - IPM05116</h4>
-                <p>Turns ideas into actual products students can use.</p>
-            </div>
-            <div class="team-member">
-                <h4>Shubh Agarwal — CEO - IPM05135</h4>
-                <p>Leads the vision and keeps the ship sailing in the right direction.</p>
-            </div>
-            <div class="team-member">
-                <h4>Somansha Singh — CTO - IPM05138</h4>
-                <p>Handles all things tech to make sure the platform runs flawlessly.</p>
-            </div>
-            <div class="team-member">
-                <h4>Upagnya Chinmayi Purigilla — CGO - IPM05142</h4>
-                <p>Drives growth and ensures more students join the Clycle community.</p>
-            </div>
-            <div class="team-member">
-                <h4>Thaneswari Nayak — CMO - IPM05155</h4>
-                <p>Spreads the word about Clycle and keeps our messaging fresh and relevant.</p>
-            </div>
+        <table class="team-table">
+            <thead>
+                <tr>
+                    <th>Name & Role</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Kashish Kerul Javeri — HR Head - IPM05108</td>
+                    <td>Keeps the team running smoothly and makes sure no one burns out.</td>
+                </tr>
+                <tr>
+                    <td>Malavika Byju — CFO - IPM05113</td>
+                    <td>Manages the numbers so our sustainability dreams stay financially real.</td>
+                </tr>
+                <tr>
+                    <td>Nadella Bhanu Sanjana — Product Development Head - IPM05116</td>
+                    <td>Turns ideas into actual products students can use.</td>
+                </tr>
+                <tr>
+                    <td>Shubh Agarwal — CEO - IPM05135</td>
+                    <td>Leads the vision and keeps the ship sailing in the right direction.</td>
+                </tr>
+                <tr>
+                    <td>Somansha Singh — CTO - IPM05138</td>
+                    <td>Handles all things tech to make sure the platform runs flawlessly.</td>
+                </tr>
+                <tr>
+                    <td>Upagnya Chinmayi Purigilla — CGO - IPM05142</td>
+                    <td>Drives growth and ensures more students join the Clycle community.</td>
+                </tr>
+                <tr>
+                    <td>Thaneswari Nayak — CMO - IPM05155</td>
+                    <td>Spreads the word about Clycle and keeps our messaging fresh and relevant.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Stakeholders Section -->
+        <div class="stakeholders-section">
+            <h3>Stakeholders</h3>
+            <ol>
+                <li><strong>Students:</strong> Buyers, sellers, renters, donors, and participants in the circular economy.<br>
+                <em>Interest:</em> Affordable campus essentials, convenience and trust.</li>
+                <li><strong>College Administration:</strong> Platform/Storage room enabler and facilitator.<br>
+                <em>Interest:</em> Reducing waste and enhancing campus engagement.</li>
+                <li><strong>Investors /Sponsors (if applicable in the future):</strong>  Provide funding or resources to support development and operations.<br>
+                <em>Interest:</em> ROI, platform growth, social impact, and adoption metrics.</li>
+                <li><strong>Regulatory /Compliance Bodies:</strong> Ensure platform follows local laws regarding e-commerce, data privacy, and student safety.<br>
+                <em>Interest:</em> Risk mitigation and ethical compliance.</li>
+                <li><strong>Community/ Environmental Advocates:</strong> Promote sustainability and circular economy principles.<br>
+                <em>Interest:</em> Reduced campus waste, environmental impact, and social responsibility.</li>
+                <li><strong>Peer Reviewers /Beta Testers:</strong> Early adopters who provide feedback on usability and functionality.<br>
+                <em>Interest:</em> Better product experience, usability, and adoption.</li>
+            </ol>
+        </div>
+
+        <!-- Consumer Profile Section -->
+        <div class="consumer-profile-section">
+            <h3>Consumer Profile</h3>
+            <ul>
+                <li><strong>1. Demographics</strong><br>
+                    Age: 18–25 years<br>
+                    Occupation: College and university students (undergraduate and postgraduate)<br>
+                    Location: Currently, Indian Institute of Management Rohtak (planned expansion to other campuses)<br>
+                    Income: Limited personal budget; cost-conscious
+                </li>
+                <li><strong>2. Psychographics</strong><br>
+                    Values: Sustainability, affordability, convenience<br>
+                    Interests: Academic success, fashion, fitness, secondhand shopping, cost-consciousness
+                </li>
+                <li><strong>3. Behavioral Traits</strong><br>
+                    Shopping habits: Prefers bargains, reselling, renting, and swapping over buying new<br>
+                    Tech adoption: Comfortable using apps and web platforms for buying, selling, and communicating<br>
+                    Decision drivers: Price, trust, convenience, peer reviews, ease of transaction<br>
+                    Frequency: Likely to browse weekly; post items when upgrading, decluttering, or needing essentials
+                </li>
+                <li><strong>4. Needs and Pain Points</strong><br>
+                    Needs: Affordable textbooks, electronics, clothing, campus essentials; easy-to-use platform; secure transactions<br>
+                    Pain Points: Limited local options for reselling or renting, distrust in online sellers, clutter and wasted items, lack of sustainability awareness
+                </li>
+                <li><strong>5. Target Persona (Example)</strong>
+                    <div class="persona">
+                        <strong>Name:</strong> Priya Sharma<br>
+                        <strong>Age:</strong> 20, undergraduate student<br>
+                        <strong>Behavior:</strong> Frequently purchases books she needs and sells them after use<br>
+                        <strong>Use of Clycle:</strong> Buys/rents used textbooks, posts items for sale, checks reviews before trading
+                    </div>
+                </li>
+            </ul>
         </div>
     </section>
 
@@ -178,12 +850,92 @@
         <p>We learned that building a cool app means nothing if people can't find it. Our strategy is simple: show up when students are actually searching for what we offer, be genuinely helpful, and build trust over traffic.</p>
         <p>We focus on keywords like <strong>student marketplace</strong>, <strong>campus buy and sell platform</strong>, <strong>student-to-student trading</strong>, and <strong>campus sustainable marketplace</strong> because these represent real problems we're solving.</p>
         <p>Our content plan includes blog posts, category pages, and repair hub guides — each targeting search intent stages from awareness to conversion. By creating helpful content and linking it to our platform, we build topical authority and trust with both students and search engines.</p>
+
+        <!-- Added Design Philosophy text here -->
+        <h3>Design Philosophy</h3>
+        <p>
+            Our design philosophy for Clycle emphasizes simplicity, accessibility, and sustainability. We intentionally kept the interface minimal, using earthy tones and green accents to reflect our eco-conscious theme. Every element is designed to be intuitive, easy to navigate, and highly functional, prioritizing practical usability over flashy UI/UX. This approach was used to ensure that students can interact with the platform effortlessly while focusing on the core purpose of reusing, exchanging, and recycling items.
+        </p>
+        <p>
+            We are proud to highlight that Clycle is 93% more carbon-friendly than typical websites globally, earning an A rating on the Website Carbon Calculator: a testament to our commitment to a sustainable and responsible digital experience.
+        </p>
+
+        <!-- Logo Philosophy Section -->
+        <div class="logo-philosophy-section">
+            <h3>Philosophy of Logo</h3>
+            <p>
+                The Clycle logo symbolizes connection, continuity, and sustainability, reiterating the core ethos of our platform. Its interwoven, looping design represents the circular economy (the infinity) is a symbol to empower students to reuse, recycle, and exchange items within a supportive campus community. The overall logo symbolizes nurturing sustainable habits that grow organically just like a flourishing tree.
+            </p>
+        </div>
+    </section>
+
+    <!-- Carbon Footprint Section -->
+    <section class="carbon-footprint-section">
+        <h2>Our Website's Carbon Footprint</h2>
+        <p>We care about sustainability, even online. Here’s a snapshot of the estimated carbon footprint of this website:</p>
+        <img src="https://live.staticflickr.com/65535/54739024301_66f18ce13c.jpg" alt="Carbon Footprint of Clycle Website">
+    </section>
+
+    <!-- QR Code Section -->
+    <section class="qr-section">
+        <h2>Mobile App</h2>
+        <p>Going above and beyond what was required of us, we have also made a mobile app for easy accessibility for all. Shown below is the QR code for our app, which, when scanned, leads you to our app.</p>
+        <img src="https://live.staticflickr.com/65535/54739025686_d655a74b8f_n.jpg" alt="QR Code for Clycle App">
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="tech-stack-section">
+        <h2>Tech Stack</h2>
+        <p>This website has been built using <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong> as the core technologies.<br>
+        The site currently has 10 main pages.</p>
+        <ol>
+            <li><strong>Home Page</strong><br>
+                <code>index.html</code><br>
+                Purpose: Introduces the platform, showcases featured listings, popular categories, “How it Works,” and impact metrics.
+            </li>
+            <li><strong>Browse Listings Page</strong><br>
+                <code>listings.html</code><br>
+                Purpose: Allows users to browse all available items, filter by category, and view item details.
+            </li>
+            <li><strong>Post Item / Product Page</strong><br>
+                <code>product.html</code><br>
+                Purpose: Lets users list their items for sale or exchange.
+            </li>
+            <li><strong>Contact Page</strong><br>
+                <code>contact.html</code> (or a section within <code>index.html</code> depending on design)<br>
+                Purpose: Provides contact information for support or inquiries.
+            </li>
+            <li><strong>Sign In / Authentication Page</strong><br>
+                <code>auth.html</code><br>
+                Purpose: Allows users to sign in or register.
+            </li>
+            <li><strong>Profile Page</strong><br>
+                <code>profile.html</code><br>
+                Purpose: Displays user-specific information, listings, and account details.
+            </li>
+            <li><strong>About Us Page</strong><br>
+                <code>aboutus.html</code><br>
+                Purpose: Explains the mission, vision, and story of Clycle.
+            </li>
+            <li><strong>Repair / Reuse Information Page</strong><br>
+                <code>repair-reuse.html</code><br>
+                Purpose: Educates users on sustainable practices and how to repair/reuse items.
+            </li>
+            <li><strong>Blog / Clycle Blog Page</strong><br>
+                <code>clycleblog2.html</code><br>
+                Purpose: Provides articles, news, and tips related to sustainability and student marketplaces.
+            </li>
+            <li><strong>Hidden / Miscellaneous Page</strong><br>
+                <code>hiddenpage.html</code><br>
+                Purpose: Possibly used for testing, admin functions, or hidden content not directly linked in the navigation.
+            </li>
+        </ol>
+        <p>A single global stylesheet (<code>styles.css</code>) is used across all pages, ensuring consistent design and easy maintenance.</p>
     </section>
 </main>
 
 <footer>
     &copy; 2025 Clycle | Secure Student Marketplace | Affordable Campus Essentials
 </footer>
-
 </body>
 </html>
