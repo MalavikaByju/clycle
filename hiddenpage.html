@@ -268,6 +268,57 @@
             margin-top: 15px;
             background: #eee;
         }
+        #login-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(250,250,250,0.98);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #login-box {
+            background: #fff;
+            border: 1px solid #8D9758;
+            border-radius: 10px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+            padding: 32px 28px 24px 28px;
+            min-width: 320px;
+            text-align: center;
+        }
+        #login-box h2 {
+            margin-top: 0;
+            color: #454135;
+            font-size: 1.3rem;
+            margin-bottom: 18px;
+        }
+        #login-box input[type="password"] {
+            padding: 8px 12px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 80%;
+            margin-bottom: 14px;
+        }
+        #login-box button {
+            background: #8D9758;
+            color: #fff;
+            border: none;
+            padding: 8px 22px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 6px;
+        }
+        #login-box button:hover {
+            background: #454135;
+        }
+        #login-error {
+            color: #c0392b;
+            margin-top: 8px;
+            font-size: 0.98em;
+            min-height: 22px;
+        }
         @media (max-width: 600px) {
             main {
                 padding: 12px 4vw 0 4vw;
@@ -281,11 +332,22 @@
             .wbd-container {
                 flex-direction: column;
             }
+            #login-box { min-width: 90vw; }
         }
     </style>
 </head>
 <body>
-
+<!-- Password Login Overlay -->
+<div id="login-overlay">
+    <form id="login-box" autocomplete="off" onsubmit="return false;">
+        <h2>Enter Password to Access</h2>
+        <input type="password" id="login-password" placeholder="Password" required autofocus>
+        <br>
+        <button type="submit" id="login-btn">Login</button>
+        <div id="login-error"></div>
+    </form>
+</div>
+<div id="protected-content" style="display:none;">
 <!-- WBD Project Requirements Section -->
 <div style="background-color:#f8f9fa; padding:0 0 10px 0; margin:0;">
     <h1 class="wbd-h1">WBD Project Requirements</h1>
@@ -857,7 +919,7 @@
             Our design philosophy for Clycle emphasizes simplicity, accessibility, and sustainability. We intentionally kept the interface minimal, using earthy tones and green accents to reflect our eco-conscious theme. Every element is designed to be intuitive, easy to navigate, and highly functional, prioritizing practical usability over flashy UI/UX. This approach was used to ensure that students can interact with the platform effortlessly while focusing on the core purpose of reusing, exchanging, and recycling items.
         </p>
         <p>
-            We are proud to highlight that Clycle is 93% more carbon-friendly than typical websites globally, earning an A rating on the Website Carbon Calculator: a testament to our commitment to a sustainable and responsible digital experience.
+            We are proud to highlight that Clycle is 93% more carbon-friendly than typical websites globally, earning an A rating on the Website Carbon Calculator: a testament to our commitment to a sustainable and responsible digital experience.
         </p>
 
         <!-- Logo Philosophy Section -->
@@ -879,7 +941,7 @@
     <!-- QR Code Section -->
     <section class="qr-section">
         <h2>Mobile App</h2>
-        <p>Going above and beyond what was required of us, we have also made a mobile app for easy accessibility for all. Shown below is the QR code for our app, which, when scanned, leads you to our app.</p>
+        <p>Going above and beyond what was required of us, we have also made a mobile app for easy accessibility for all. Shown below is the QR code for our app, which, when scanned, leads you to our app.</p>
         <img src="https://live.staticflickr.com/65535/54739025686_d655a74b8f_n.jpg" alt="QR Code for Clycle App (Placeholder)">
     </section>
 
@@ -937,5 +999,26 @@
 <footer>
     &copy; 2025 Clycle | Secure Student Marketplace | Affordable Campus Essentials
 </footer>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    document.body.style.overflow = "hidden";
+    document.getElementById('login-box').onsubmit = function() {
+        var pass = document.getElementById('login-password').value;
+        var error = document.getElementById('login-error');
+        if (pass === "Clycle2025") {
+            document.getElementById('login-overlay').style.display = "none";
+            document.getElementById('protected-content').style.display = "block";
+            document.body.style.overflow = "auto";
+            return false;
+        } else {
+            error.textContent = "Incorrect password. Please try again.";
+            document.getElementById('login-password').value = "";
+            document.getElementById('login-password').focus();
+            return false;
+        }
+    };
+});
+</script>
 </body>
 </html>
