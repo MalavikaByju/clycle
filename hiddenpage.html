@@ -285,7 +285,35 @@
     </style>
 </head>
 <body>
-
+<!-- Password Login Overlay -->
+<div id="login-overlay">
+    <form id="login-box" autocomplete="off" onsubmit="return false;">
+        <h2>Enter Password to Access</h2>
+        <input type="password" id="login-password" placeholder="Password" required autofocus>
+        <br>
+        <button type="submit" id="login-btn">Login</button>
+        <div id="login-error"></div>
+    </form>
+</div>
+<script>
+// Simple password protection
+document.getElementById('login-box').onsubmit = function() {
+    var pass = document.getElementById('login-password').value;
+    var error = document.getElementById('login-error');
+    if (pass === "Clycle2025") {
+        document.getElementById('login-overlay').style.display = "none";
+        document.body.style.overflow = "auto";
+        return false;
+    } else {
+        error.textContent = "Incorrect password. Please try again.";
+        document.getElementById('login-password').value = "";
+        document.getElementById('login-password').focus();
+        return false;
+    }
+};
+// Prevent scrolling when overlay is active
+document.body.style.overflow = "hidden";
+</script>
 <!-- WBD Project Requirements Section -->
 <div style="background-color:#f8f9fa; padding:0 0 10px 0; margin:0;">
     <h1 class="wbd-h1">WBD Project Requirements</h1>
