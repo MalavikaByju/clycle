@@ -1235,7 +1235,7 @@ function renderProductDetail(product) {
                         <div class="tab-panel active" id="description-panel">
                             <p>${product.description}</p>
                             <div class="disclaimer">
-                                <p><small>Please inspect the item carefully before purchase. All sales are final. Meet in safe, public locations on campus like in front of the library, academic block, mess, hostels where CCTV cameras are placed to ensure you safety.</small></p>
+                                <p><small>Please inspect the item carefully before purchase. All sales are final. Meet in safe, public locations on campus like in front of the library, academic block, mess, hostels where CCTV cameras are placed to ensure your safety.</small></p>
                             </div>
                         </div>
                         <div class="tab-panel" id="history-panel">
